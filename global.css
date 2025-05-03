@@ -1,0 +1,15 @@
+:root{--cinza-image: #383841;
+    --azul-escuro: #1D223B;
+    --cinza-fundo: #E3E2E9;
+    --cinza-caneta:#383B59;
+    --laranja-board: #BD754E;
+}
+
+body{
+    background-color :var(--cinza-fundo);
+
+    h1{font-size: 1.5rem;}
+
+    h2{font-size: 1.2rem;}
+
+}
