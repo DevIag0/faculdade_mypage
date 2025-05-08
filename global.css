@@ -1,3 +1,4 @@
+/*cores usadas no projeto*/
 :root{--cinza-image: #383841;
     --azul-escuro: #1D223B;
     --cinza-fundo: #E3E2E9;
@@ -12,4 +13,125 @@ body{
 
     h2{font-size: 1.2rem;}
 
+}
+
+.header{
+    max-width :1500px;
+    margin : 0 auto;
+    padding: 30px 0;
+}
+
+/* suportes da board */
+
+.suporte-lateral-1{
+    position: absolute;
+    top: 0;
+    left: 800px;
+    height: 100px;
+    width: 50px;
+    background-color: #383841;
+    border-radius: 0 0 20px 20px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 5px #000000;
+    z-index: 0;
+}
+
+.suporte-lateral-2{
+    position: absolute;
+    top: 0;
+    right: 800px;
+    height: 100px;
+    width: 50px;
+    background-color: #383841;
+    border-radius: 0 0 20px 20px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 5px #000000;
+    z-index: 0;
+}
+
+.furo-board-1{
+    position: absolute;
+    top: 70px;
+    left: 800px;
+    height: 50px;
+    width: 50px;
+    background-color: #dbdbe1;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 5px #000000;
+    z-index: -1;
+
+}
+
+.furo-board-2{
+    position: absolute;
+    top: 70px;
+    right: 800px;
+    height: 50px;
+    width: 50px;
+    background-color: #dbdbe1;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 5px #000000;
+    z-index: -1;
+}
+
+
+.suporte-laterais-3{
+    position: absolute;
+    bottom: 0px;
+    left: 500px;
+    height: 80px;
+    width: 50px;
+    background-color: #383841;
+    border-radius: 20px 20px 0px 0px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 5px #000000;
+    z-index: 0;
+}
+
+.furo-board-3{
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
+    height: 45px;
+    width: 50px;
+    background-color: #dbdbe1;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 5px #000000;
+    z-index: -1;
+}
+
+.suporte-laterais-4{
+    position: absolute;
+    bottom: 0px;
+    right: 500px;
+    height: 80px;
+    width: 50px;
+    background-color: #383841;
+    border-radius: 20px 20px 0px 0px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 5px #000000;
+    z-index: 0;
+}
+
+.furo-board-4{
+    position: absolute;
+    bottom: 50px;
+    right: 500px;
+    height: 50px;
+    width: 50px;
+    background-color: #dbdbe1;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 5px #000000;
+    z-index: -1;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
 }

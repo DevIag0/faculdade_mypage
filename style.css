@@ -1,70 +1,11 @@
-
-
-.header{
-    max-width :1500px;
-    margin : 30px 120px;
-    
-}
-
-.suporte-laterais{
-    position: absolute;
-    top: 0;
-    left: 600px;
-    height: 100px;
-    width: 50px;
-    background-color: #383841;
-    border-radius: 0 0 20px 20px;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 5px #000000;
-    z-index: 0;
-}
-
-.furo-board{
-    position: absolute;
-    top: 70px;
-    left: 600px;
-    height: 50px;
-    width: 50px;
-    background-color: #dbdbe1;
-    border-radius: 50%;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 5px #000000;
-    z-index: -1;
-
-}
-
-.suporte-laterais-2{
-    position: absolute;
-    top: 0;
-    right: 600px;
-    height: 100px;
-    width: 50px;
-    background-color: #383841;
-    border-radius: 0 0 20px 20px;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 5px #000000;
-    z-index: 0;
-}
-
-.furo-board-2{
-    position: absolute;
-    top: 70px;
-    right: 600px;
-    height: 50px;
-    width: 50px;
-    background-color: #dbdbe1;
-    border-radius: 50%;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 5px #000000;
-    z-index: -1;
-
-}
 .header-nav ul{
+    max-width: 1500px;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
     gap:20px;
     justify-content: right;
+    align-items: center;
     list-style: none;
         li a{
             color: #000000;
@@ -73,13 +14,12 @@
         }
 }
 
-.container{
-    display: flex;
-    justify-content: center;
+.container-board{
     position: relative;
+    display: flex;
     max-width: 1500px;
-    height: 650px;
-    margin: 0 auto;  ;
+    height: 75vh;
+    margin: 0 auto;
     background-color: var(--laranja-board);
     border-radius: 20px;
     border: 1px solid #000000;
@@ -95,7 +35,7 @@
     flex-direction: column;
     justify-content: center;
     width: 450px;
-    height: 350px;
+    height: 520px;
     gap: 20px;
     padding: 30px;
     background-color: #F5F5F5;
@@ -113,7 +53,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 390px;
+    height: 560px;
     width: 650px;
     background-color: var(--cinza-image);
     align-items: center;
@@ -123,15 +63,13 @@
     padding: 30px;
     box-shadow: 0px 0px 10px #000000;
     z-index: 1;
-    
-
-        
+     
     }
     h1{
 
         font-size: 1.5rem;
         font-weight: 800;
-        color: #fdf7f7;
+        color: #050505;
     }
 
 
@@ -156,7 +94,7 @@
     top: 100px;
     right: 100px;
     width: 200px;
-    height: 450px;
+    height: 620px;
     background-color: var(--cinza-image);
     border-radius: 20px;
     border: 1px solid #000000;
@@ -168,7 +106,7 @@
     position: absolute;
     left:  50px; 
     top: 75px;
-    height:500px;
+    height:670px;
     width: 100px;
     background-color: var(--cinza-fundo);
     border-radius: 20px;
@@ -182,14 +120,69 @@
     position: absolute;
     right:  50px;
     top: 75px;
-    height:500px;
+    height:670px;
     width: 100px;
     background-color: var(--cinza-fundo);
     border-radius: 20px;
     border: 1px solid #000000;
     box-shadow: 0px 0px 5px #000000;
     z-index: 0;
+}
 
-    
-  
+@media (max-width: 768px) {
+    .header-nav ul {
+        flex-direction: column; /* Empilha os itens do menu */
+        gap: 10px; /* Reduz o espaçamento */
+        justify-content: center; /* Centraliza o menu */
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+
+    .container-board {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        max-width: 95%; /* Reduz a largura */
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 15px; /* Ajusta o espaçamento interno */
+    }
+
+    .container-description {
+        width: 100%; /* Ocupa toda a largura disponível */
+        right: 0; /* Remove o deslocamento */
+        top: auto; /* Remove o deslocamento vertical */
+        margin-top: 20px; /* Adiciona espaçamento entre os elementos */
+    }
+
+    .container-image {
+        width: 100%; /* Ocupa toda a largura disponível */
+        left: 0; /* Remove o deslocamento */
+        margin-bottom: 20px; /* Adiciona espaçamento entre os elementos */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header-nav ul {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
+    }
+
+    .container-board {
+        flex-direction: column;
+        max-width: 100%; /* Usa toda a largura da tela */
+        padding: 10px;
+    }
+
+    .container-description {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        padding: 10px; /* Reduz o espaçamento interno */
+    }
+
+    .container-image-border {
+        width: 100px; /* Reduz o tamanho da imagem */
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Reduz o tamanho do título */
+    }
 }
