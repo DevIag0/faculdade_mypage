@@ -26,7 +26,7 @@ body{
 .suporte-lateral-1{
     position: absolute;
     top: 0;
-    left: 800px;
+    left: 40%;
     height: 100px;
     width: 50px;
     background-color: #383841;
@@ -39,7 +39,7 @@ body{
 .suporte-lateral-2{
     position: absolute;
     top: 0;
-    right: 800px;
+    right: 40%;
     height: 100px;
     width: 50px;
     background-color: #383841;
@@ -52,7 +52,7 @@ body{
 .furo-board-1{
     position: absolute;
     top: 70px;
-    left: 800px;
+    left: 40%;
     height: 50px;
     width: 50px;
     background-color: #dbdbe1;
@@ -66,7 +66,7 @@ body{
 .furo-board-2{
     position: absolute;
     top: 70px;
-    right: 800px;
+    right: 40%;
     height: 50px;
     width: 50px;
     background-color: #dbdbe1;
@@ -80,7 +80,7 @@ body{
 .suporte-laterais-3{
     position: absolute;
     bottom: 0px;
-    left: 500px;
+    left: 20%;
     height: 80px;
     width: 50px;
     background-color: #383841;
@@ -93,7 +93,7 @@ body{
 .furo-board-3{
     position: absolute;
     bottom: 50px;
-    left: 500px;
+    left: 20%;
     height: 50px;
     width: 50px;
     background-color: #dbdbe1;
@@ -106,7 +106,7 @@ body{
 .suporte-laterais-4{
     position: absolute;
     bottom: 0px;
-    right: 500px;
+    right: 20%;
     height: 80px;
     width: 50px;
     background-color: #383841;
@@ -119,7 +119,7 @@ body{
 .furo-board-4{
     position: absolute;
     bottom: 50px;
-    right: 500px;
+    right: 20%;
     height: 50px;
     width: 50px;
     background-color: #dbdbe1;
@@ -130,6 +130,10 @@ body{
 }
 
 .footer-container{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
