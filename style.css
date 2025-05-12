@@ -102,29 +102,3 @@
     z-index: 1;
 }
 
-.container-white-left{
-    position: absolute;
-    top: 8%;
-    left: 5%;
-    width: 7%;
-    height: 84%;
-    background-color: var(--cinza-fundo);
-    border-radius: 20px;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 5px #000000;
-    z-index: 0;
-
-}
-
-.container-white-right{
-    position: absolute;
-    top: 8%;
-    right: 5%;
-    width: 7%;
-    height: 84%;
-    background-color: var(--cinza-fundo);
-    border-radius: 20px;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 5px #000000;
-    z-index: 0;
-}
