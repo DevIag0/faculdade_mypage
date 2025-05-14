@@ -236,9 +236,21 @@ body{
     z-index: 2;
     border: 1px solid #000000;
     border-radius: 5px;
-
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transform: rotate(-2deg);
 }
 
+.suporte-grampo::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 4px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
 
 .suporte-grampo-2{
     position:absolute;
@@ -250,5 +262,18 @@ body{
     z-index: 2;
     border: 1px solid #000000;
     border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transform: rotate(2deg);
+}
 
+.suporte-grampo-2::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 4px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 2px;
 }
