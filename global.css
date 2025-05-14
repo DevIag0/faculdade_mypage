@@ -32,12 +32,17 @@ body{
     padding: 30px 0;
 }
 
+.header-nav{
+    margin-right: 10%;
+}
+
+
 /* suportes da board */
 
 .suporte-lateral-1{
     position: absolute;
     top: 0;
-    left: 40%;
+    left: 12%;
     height: 100px;
     width: 50px;
     background-color: #1a1c20;
@@ -50,7 +55,7 @@ body{
 .suporte-lateral-2{
     position: absolute;
     top: 0;
-    right: 40%;
+    right: 12%;
     height: 100px;
     width: 50px;
     background-color: #1a1c20;
@@ -63,7 +68,7 @@ body{
 .furo-board-1{
     position: absolute;
     top: 70px;
-    left: 40%;
+    left: 12%;
     height: 50px;
     width: 50px;
     background-color: #2c3e50;
@@ -76,7 +81,7 @@ body{
 .furo-board-2{
     position: absolute;
     top: 70px;
-    right: 40%;
+    right: 12%;
     height: 50px;
     width: 50px;
     background-color: #2c3e50;
@@ -144,12 +149,15 @@ body{
     justify-content: center;
     align-items: center;
     margin: 20px 0 0 0;
+    color: var(--branco);
+    font-size: 1rem;
+ 
 }
 
 .caneta{
     position: absolute;
     top: 28px;
-    left: 20%;
+    left: 25%;
     width: 40px;
     height: 52px;
     border-radius: 10px 10px 0 0;
@@ -161,7 +169,7 @@ body{
 .caneta-tampinha{
     position: absolute;
     top: 40px;
-    left: 21%;
+    left: 26%;
     width: 20px;
     height: 90px;
     background-color: var(--cinza-caneta);
@@ -220,7 +228,7 @@ body{
 
 .suporte-grampo{
     position:absolute;
-    top:60%;
+    top:12%;
     left: 45%;
     height: 2%;
     width: 10%;
@@ -234,7 +242,7 @@ body{
 
 .suporte-grampo-2{
     position:absolute;
-    top:70%;
+    bottom: 12%;
     left: 45%;
     height: 2%;
     width: 10%;
