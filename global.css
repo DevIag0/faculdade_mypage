@@ -1,6 +1,21 @@
-/*cores usadas no projeto*/
+
+/**
+ * ESTILOS GLOBAIS
+ * ------------------------------------------------------------------
+ * Este arquivo define variáveis CSS, estilos base e componentes
+ * reutilizáveis que são usados em todo o site. A definição de cores
+ * e estilos globais aqui permite uma fácil manutenção e consistência
+ * visual em todo o projeto.
+ */
+
+/**
+ * SISTEMA DE CORES
+ * ------------------------------------------------------------------
+ * Define as variáveis de cores do tema usando o elemento :root
+ * para disponibilizar em todo o documento
+ */
 :root{
-    /* Paleta Dark Profissional */
+    /* Paleta Dark Profissional - tema principal inspirado em quadro escolar */
     --cinza-image: #2D3436;      /* Cinza escuro para containers */
     --azul-escuro: #1E272E;      /* Cinza mais escuro para detalhes */
     --cinza-fundo: #222F3E;      /* Azul escuro para fundo */
@@ -13,49 +28,68 @@
     --destaque: #FFA000;         /* Amarelo âmbar para elementos de destaque */
 }
 
+/**
+ * ESTILOS BÁSICOS DO DOCUMENTO
+ * ------------------------------------------------------------------
+ * Configurações básicas para o corpo do documento e elementos de texto
+ */
 body{
-    background-color :var(--cinza-fundo);
+    background-color :var(--cinza-fundo);  /* Define a cor de fundo padrão para o site */
 
-    h1{font-size: 1.7rem;}
+    /* Hierarquia de títulos e texto com tamanhos responsivos */
+    h1{font-size: 1.7rem;}  /* Título principal */
 
-    h2{font-size: 1.4rem;}
+    h2{font-size: 1.4rem;}  /* Subtítulo */
 
-    p{font-size: 1.2rem;
-    line-height: 1.1;}
-    
-
+    p{
+        font-size: 1.2rem;  /* Tamanho de texto padrão */
+        line-height: 1.1;   /* Espaçamento entre linhas para melhor legibilidade */
+    }
 }
 
+/**
+ * ESTILOS DE CABEÇALHO
+ * ------------------------------------------------------------------
+ * Layout e espaçamento do cabeçalho principal
+ */
 .header{
-    max-width :1500px;
-    margin : 0 auto;
-    padding: 30px 0;
+    max-width :1500px;     /* Largura máxima para centralizar em telas grandes */
+    margin : 0 auto;       /* Centraliza horizontalmente */
+    padding: 30px 0;       /* Espaçamento vertical */
 }
 
+/* Navegação do cabeçalho */
 .header-nav{
-    margin-right: 10%;
+    margin-right: 10%;     /* Espaçamento à direita */
 }
 
 
-/* suportes da board */
+/**
+ * ELEMENTOS DECORATIVOS DO QUADRO
+ * ------------------------------------------------------------------
+ * Elementos visuais que simulam um quadro escolar suspenso
+ * Incluem suportes, furos e outros elementos decorativos
+ */
 
+/* Suportes superiores do quadro (aparência de sustentação) */
 .suporte-lateral-1{
-    position: absolute;
-    top: 0;
-    left: 12%;
-    height: 100px;
-    width: 50px;
-    background-color: #1a1c20;
-    border-radius: 0 0 20px 20px;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    z-index: 2;
+    position: absolute;     /* Posicionamento absoluto para controle preciso */
+    top: 0;                 /* Alinhado ao topo */
+    left: 12%;              /* Posição horizontal à esquerda */
+    height: 100px;          /* Altura do suporte */
+    width: 50px;            /* Largura do suporte */
+    background-color: #1a1c20; /* Cor escura para o suporte */
+    border-radius: 0 0 20px 20px; /* Borda arredondada na parte inferior */
+    border: 1px solid #000000;    /* Borda fina */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* Sombra para efeito 3D */
+    z-index: 2;             /* Camada acima do quadro principal */
 }
 
+/* Suporte superior direito - espelho do esquerdo */
 .suporte-lateral-2{
     position: absolute;
     top: 0;
-    right: 12%;
+    right: 12%;            /* Posicionado à direita */
     height: 100px;
     width: 50px;
     background-color: #1a1c20;
@@ -65,23 +99,26 @@ body{
     z-index: 2;
 }
 
+/* Furos decorativos superiores - simulam furos de encadernação */
 .furo-board-1{
     position: absolute;
-    top: 70px;
-    left: 12%;
-    height: 50px;
+    top: 70px;              /* Posicionado abaixo do suporte */
+    left: 12%;              /* Alinhado com suporte esquerdo */
+    height: 50px;           /* Tamanho circular */
     width: 50px;
-    background-color: #2c3e50;
-    border-radius: 50%;
-    border: 1px solid #000000;
+    background-color: #2c3e50; /* Cor escura do furo */
+    border-radius: 50%;     /* Forma circular */
+    border: 1px solid #000000; /* Borda fina */
+    /* Sombra externa e interna para efeito de profundidade */
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5), inset 0px 0px 15px rgba(10, 189, 227, 0.1);
-    z-index: 1;
+    z-index: 1;             /* Camada abaixo dos suportes */
 }
 
+/* Furo superior direito - espelho do esquerdo */
 .furo-board-2{
     position: absolute;
     top: 70px;
-    right: 12%;
+    right: 12%;            /* Posicionado à direita */
     height: 50px;
     width: 50px;
     background-color: #2c3e50;
@@ -91,114 +128,136 @@ body{
     z-index: 1;
 }
 
-
+/* Suportes inferiores - simulam a sustentação na parte de baixo do quadro */
 .suporte-laterais-3{
     position: absolute;
-    bottom: 0px;
-    left: 12%;
-    height: 80px;
-    width: 50px;
-    background-color: #1a1c20;
+    bottom: 0px;           /* Alinhado com a parte inferior */
+    left: 12%;             /* Posição horizontal à esquerda */
+    height: 80px;          /* Altura do suporte */
+    width: 50px;           /* Largura do suporte */
+    background-color: #1a1c20; /* Cor escura para o suporte */
     border-radius: 20px 20px 0px 0px;
     border: 1px solid #000000;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     z-index: 1;
 }
 
+/* Furo inferior esquerdo - similar aos furos superiores */
 .furo-board-3{
     position: absolute;
-    bottom: 50px;
-    left: 12%;
+    bottom: 50px;          /* Posicionado acima do suporte inferior */
+    left: 12%;             /* Alinhado com suporte esquerdo */
     height: 50px;
     width: 50px;
     background-color: #2c3e50;
-    border-radius: 50%;
+    border-radius: 50%;    /* Forma circular */
     border: 1px solid #000000;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5), inset 0px 0px 15px rgba(10, 189, 227, 0.1);
-    z-index: 0;
+    z-index: 0;            /* Camada mais baixa */
 }
 
+/* Suporte inferior direito - espelho do esquerdo */
 .suporte-laterais-4{
     position: absolute;
-    bottom: 0px;
-    right: 12%;
+    bottom: 0px;           /* Alinhado na parte inferior */
+    right: 12%;            /* Posicionado à direita */
     height: 80px;
     width: 50px;
     background-color: #1a1c20;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 0px 0px; /* Borda arredondada apenas na parte superior */
     border: 1px solid #000000;
     box-shadow: 0px 0px 5px #000000;
     z-index: 1;
 }
 
+/* Furo inferior direito - espelho do esquerdo */
 .furo-board-4{
     position: absolute;
-    bottom: 50px;
-    right: 12%;
+    bottom: 50px;          /* Posicionado acima do suporte inferior */
+    right: 12%;            /* Alinhado com suporte direito */
     height: 50px;
     width: 50px;
     background-color: #2c3e50;
-    border-radius: 50%;
+    border-radius: 50%;    /* Forma circular */
     border: 1px solid #000000;
     box-shadow: 0px 0px 5px #000000;
-    z-index: 0;
+    z-index: 0;            /* Camada mais baixa */
 }
 
+/**
+ * ESTILO DO RODAPÉ
+ * ------------------------------------------------------------------
+ * Configuração visual do rodapé do site
+ */
 .footer-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0 0 0;
-    color: var(--branco);
-    font-size: 1rem;
+    display: flex;          /* Layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    margin: 20px 0 0 0;      /* Margem superior */
+    color: var(--branco);    /* Cor do texto */
+    font-size: 1rem;         /* Tamanho da fonte */
  
 }
 
+/**
+ * ELEMENTOS DECORATIVOS DE CANETA 
+ * ------------------------------------------------------------------
+ * Simulação visual de uma caneta apoiada no quadro
+ */
 .caneta{
     position: absolute;
-    top: 28px;
-    left: 25%;
-    width: 40px;
-    height: 52px;
-    border-radius: 10px 10px 0 0;
-    border: 1px solid #000000;
-    z-index: 1;
-    background-color: var(--cinza-caneta);
-    box-shadow: 0px 0px 10px rgba(10, 189, 227, 0.5);
+    top: 28px;               /* Posição vertical */
+    left: 25%;               /* Posição horizontal */
+    width: 40px;             /* Largura da caneta */
+    height: 52px;            /* Altura da parte superior */
+    border-radius: 10px 10px 0 0; /* Arredondamento apenas no topo */
+    border: 1px solid #000000;    /* Borda fina */
+    z-index: 1;              /* Camada intermediária */
+    background-color: var(--cinza-caneta); /* Cor azul da caneta */
+    box-shadow: 0px 0px 10px rgba(10, 189, 227, 0.5); /* Brilho suave */
 }
+
+/* Parte inferior da caneta (corpo) */
 .caneta-tampinha{
     position: absolute;
-    top: 40px;
-    left: 26%;
-    width: 20px;
-    height: 90px;
-    background-color: var(--cinza-caneta);
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 10px rgba(10, 189, 227, 0.5);
-    z-index: 1;
-    border-radius: 7px;
+    top: 40px;               /* Alinhado com a parte superior */
+    left: 26%;               /* Centralizado com a parte superior */
+    width: 20px;             /* Mais fino que a parte superior */
+    height: 90px;            /* Corpo alongado da caneta */
+    background-color: var(--cinza-caneta); /* Mesma cor da parte superior */
+    border: 1px solid #000000;            /* Borda fina */
+    box-shadow: 0px 0px 10px rgba(10, 189, 227, 0.5); /* Brilho suave */
+    z-index: 1;              /* Mesma camada da parte superior */
+    border-radius: 7px;      /* Levemente arredondado */
 }
 
+/**
+ * CONTAINERS LATERAIS DECORATIVOS
+ * ------------------------------------------------------------------
+ * Elementos para dar profundidade e decoração às laterais do quadro
+ */
 .container-white-left{
     position: absolute;
-    top: 8%;
-    left: 5%;
-    width: 7%;
-    height: 84%;
-    background-color: rgba(34, 47, 62, 0.9);
-    border-radius: 20px;
-    border: 1px solid rgba(0,0,0,0.5);
+    top: 8%;               /* Distância do topo */
+    left: 5%;              /* Posição no lado esquerdo */
+    width: 7%;             /* Largura fina */
+    height: 84%;           /* Altura quase completa do quadro */
+    background-color: rgba(34, 47, 62, 0.9); /* Fundo semi-transparente */
+    border-radius: 20px;   /* Bordas arredondadas */
+    border: 1px solid rgba(0,0,0,0.5); /* Borda sutil */
+    /* Sombras para efeito de profundidade */
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    z-index: 0;
-    backdrop-filter: blur(5px);
+    z-index: 0;            /* Camada de fundo */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 
+/* Container lateral direito - espelho do esquerdo */
 .container-white-right{
     position: absolute;
-    top: 8%;
-    right: 5%;
-    width: 7%;
-    height: 84%;
+    top: 8%;               /* Mesma distância do topo */
+    right: 5%;             /* Posição no lado direito */
+    width: 7%;             /* Mesma largura */
+    height: 84%;           /* Mesma altura */
     background-color: rgba(34, 47, 62, 0.9);
     border-radius: 20px;
     border: 1px solid rgba(0,0,0,0.5);
@@ -207,55 +266,68 @@ body{
     backdrop-filter: blur(5px);
 }
 
+/**
+ * CONTAINER DE FORMULÁRIO
+ * ------------------------------------------------------------------
+ * Estilização do container que abriga formulários (ex: contato)
+ */
 .container-form{
     position: absolute;
-    top: 10%;
-    left: 8%;
-    height: 72%;
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(29, 33, 35, 0.95);
-    align-items: center;
-    border-radius: 15px;
-    border: 1px solid rgba(0,0,0,0.5);
+    top: 10%;              /* Posição vertical */
+    left: 8%;              /* Posição horizontal */
+    height: 72%;           /* Altura proporcional ao quadro */
+    width: 35%;            /* Largura do container */
+    display: flex;         /* Layout flexível */
+    justify-content: center; /* Centralização horizontal do conteúdo */
+    align-items: center;     /* Centralização vertical do conteúdo */
+    background-color: rgba(29, 33, 35, 0.95); /* Fundo escuro semi-transparente */
+    border-radius: 15px;     /* Bordas arredondadas */
+    border: 1px solid rgba(0,0,0,0.5); /* Borda sutil */
+    /* Sombras para efeito de profundidade */
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    z-index: 1;
-    padding: 30px;
-    gap: 20%;
-    backdrop-filter: blur(5px);
+    z-index: 1;            /* Camada intermediária */
+    padding: 30px;         /* Espaçamento interno */
+    gap: 20%;              /* Espaçamento entre elementos filhos */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 
+/**
+ * ELEMENTOS DE GRAMPO DECORATIVOS
+ * ------------------------------------------------------------------
+ * Simulam grampos que fixam documentos no quadro
+ */
 .suporte-grampo{
     position:absolute;
-    top:12%;
-    left: 45%;
-    height: 2%;
-    width: 10%;
-    background-color: var(--destaque);
-    z-index: 2;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    transform: rotate(-2deg);
+    top:12%;              /* Posição vertical superior */
+    left: 45%;            /* Centralizado horizontalmente */
+    height: 2%;           /* Altura proporcional */
+    width: 10%;           /* Largura do grampo */
+    background-color: var(--destaque); /* Cor amarelada (destaque) */
+    z-index: 2;           /* Camada acima do conteúdo */
+    border: 1px solid #000000; /* Borda fina */
+    border-radius: 5px;   /* Leve arredondamento */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3); /* Sombra para efeito 3D */
+    
 }
 
+/* Detalhe visual do grampo (parte de cima) */
 .suporte-grampo::after {
-    content: "";
+    content: "";          /* Elemento de pseudo-conteúdo */
     position: absolute;
-    top: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30%;
-    height: 4px;
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 2px;
+    top: -2px;            /* Posicionado acima do grampo */
+    left: 50%;            /* Centralizado */
+    transform: translateX(-50%); /* Ajuste fino de centralização */
+    width: 30%;           /* Largura proporcional ao grampo */
+    height: 4px;          /* Altura fixa */
+    background-color: rgba(0,0,0,0.3); /* Cor escura semi-transparente */
+    border-radius: 2px;   /* Leve arredondamento */
 }
 
+/* Grampo inferior - espelho do superior */
 .suporte-grampo-2{
     position:absolute;
-    bottom: 12%;
-    left: 45%;
+    bottom: 12%;          /* Posição vertical inferior */
+    left: 45%;            /* Mesma posição horizontal do grampo superior */
     height: 2%;
     width: 10%;
     background-color: var(--destaque);
@@ -263,9 +335,10 @@ body{
     border: 1px solid #000000;
     border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    transform: rotate(2deg);
+    
 }
 
+/* Detalhe visual do grampo inferior (parte de cima) */
 .suporte-grampo-2::after {
     content: "";
     position: absolute;

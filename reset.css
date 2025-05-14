@@ -1,3 +1,16 @@
+
+/**
+ * CSS RESET
+ * ------------------------------------------------------------------
+ * Este arquivo define o reset CSS para o site, removendo os estilos
+ * padrão dos navegadores para garantir uma experiência consistente
+ * entre diferentes navegadores e dispositivos.
+ *
+ * Remove margens, preenchimentos, bordas e redefine fontes para
+ * estabelecer uma base uniforme para o projeto.
+ */
+
+/* Reset para todos os elementos HTML principais */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -11,34 +24,44 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	text-decoration: none;
+	margin: 0;           /* Remove margens */
+	padding: 0;          /* Remove preenchimentos */
+	border: 0;           /* Remove bordas */
+	font-size: 100%;     /* Padroniza tamanho de fonte */
+	font: inherit;       /* Herda fonte do elemento pai */
+	vertical-align: baseline;  /* Alinhamento vertical consistente */
+	text-decoration: none;     /* Remove decoração de texto (sublinhados) */
 }
-/* HTML5 reset para navegadores antigos*/
+/* HTML5 reset para navegadores antigos - Garante compatibilidade com navegadores que não suportam HTML5 nativamente */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: block;  /* Define elementos HTML5 como blocos para navegadores antigos */
 }
+
+/* Redefine propriedades específicas para elementos comuns */
 body {
-	line-height: 1;
+	line-height: 1;  /* Define altura de linha padrão */
 }
+
+/* Remove bullets/marcadores de listas */
 ol, ul {
 	list-style: none;
 }
+
+/* Redefine estilo de citações */
 blockquote, q {
-	quotes: none;
+	quotes: none;  /* Remove aspas automáticas */
 }
+
+/* Remove conteúdo gerado automaticamente antes e depois de citações */
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
+/* Configurações de tabela */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse: collapse;  /* Combina bordas de células adjacentes */
+	border-spacing: 0;          /* Remove espaçamento entre células */
 }

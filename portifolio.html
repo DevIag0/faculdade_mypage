@@ -1,53 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- 
+  Página de portfólio
+  Exibe projetos e trabalhos realizados (em desenvolvimento)
+-->
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./style.css">
+    <title>Portfólio</title>
+    <!-- Folhas de estilo do projeto -->
+    <link rel="stylesheet" href="./reset.css">  <!-- Normalização de estilos entre navegadores -->
+    <link rel="stylesheet" href="./global.css"> <!-- Estilos globais e componentes reutilizáveis -->
+    <link rel="stylesheet" href="./style.css">  <!-- Estilos específicos de componentes -->
 </head>
 
 <body>
+    <!-- Suportes superiores do quadro -->
     <span class="suporte-lateral-1"></span>
-        <span class="furo-board-1"></span>
-        <span class="suporte-lateral-2"></span>
-        <span class="furo-board-2"></span>
-    <header class="header">
+    <span class="furo-board-1"></span>
+    <span class="suporte-lateral-2"></span>
+    <span class="furo-board-2"></span>
     
+    <!-- Cabeçalho com navegação -->
+    <header class="header">
         <nav class="header-nav">
             <ul>
                 <li><a href="index.html">Sobre</a></li>
-                <li><a href="portifolio.html">Portifolio</a></li>
-                <li><a href="formacao.html">Formacao</a></li>
+                <li><a href="portifolio.html">Portfólio</a></li>
+                <li><a href="formacao.html">Formação</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Conteúdo principal (quadro escolar) -->
     <main class="container-board">
-
+        <!-- 
+            Nota: Esta página está em desenvolvimento.
+            Temporariamente contém um formulário de contato,
+            mas será substituído por uma galeria de projetos.
+        -->
         <form class="contato-form" action="mailto:iagots94@gmail.com" method="post" enctype="text/plain">
-            
+            <!-- Campo para nome -->
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required placeholder="Digite seu nome">
 
+            <!-- Campo para email -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required placeholder="Digite seu email">
 
+            <!-- Campo para mensagem -->
             <label for="message">Mensagem:</label>
             <textarea id="message" name="message" rows="6" required></textarea>
 
-            <button class=button type="submit">Enviar</button>
-
+            <!-- Botão de envio -->
+            <button class="button" type="submit">Enviar</button>
         </form>
     </main>
 
+    <!-- Rodapé da página -->
     <footer>
+        <!-- Container do rodapé com informações de copyright -->
         <div class="footer-container">
             <p>Copyright &copy; 2025 Iago Trindade Souza. Todos os direitos reservados</p>
         </div>
     </footer>
+    
+    <!-- Elementos decorativos inferiores (suportes do quadro) -->
     <span class="suporte-laterais-3"></span>
     <span class="furo-board-3"></span>
     <span class="suporte-laterais-4"></span>

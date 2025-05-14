@@ -1,583 +1,797 @@
+
+/**
+ * ESTILOS ESPECÍFICOS
+ * ------------------------------------------------------------------
+ * Este arquivo contém estilos específicos para os diferentes componentes
+ * e elementos do site. Enquanto global.css define os estilos reutilizáveis,
+ * aqui são definidos os estilos particulares de cada seção.
+ */
+
+/**
+ * NAVEGAÇÃO PRINCIPAL
+ * ------------------------------------------------------------------
+ * Estilização do menu de navegação do topo da página
+ */
 .header-nav ul{
-    max-width: 1500px;
-    margin: 0 auto;
-    display: flex;    
-    gap: 20px;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
+    max-width: 1500px;     /* Largura máxima para centralização */
+    margin: 0 auto;        /* Centralização horizontal */
+    display: flex;         /* Layout flexível para itens em linha */    
+    gap: 20px;             /* Espaçamento entre itens do menu */
+    justify-content: flex-end; /* Alinhamento à direita */
+    align-items: center;   /* Alinhamento vertical ao centro */
+    list-style: none;      /* Remove marcadores de lista */
         li a{
-            color: var(--branco);
-            font-size: 1.4rem;
-            font-weight: 500;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-            transition: color 0.3s ease, text-shadow 0.3s ease;
+            color: var(--branco);  /* Cor do texto */
+            font-size: 1.4rem;     /* Tamanho da fonte */
+            font-weight: 500;      /* Peso médio da fonte */
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* Sombra sutil no texto */
+            transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave no hover */
         }
+        /* Efeito ao passar o mouse sobre links */
         li a:hover {
-            color: var(--destaque);
-            text-shadow: 0 0 8px rgba(255, 160, 0, 0.4);
+            color: var(--destaque); /* Muda para cor de destaque */
+            text-shadow: 0 0 8px rgba(255, 160, 0, 0.4); /* Adiciona brilho */
         }
 }
 
+/**
+ * QUADRO PRINCIPAL (CONTAINER PRINCIPAL)
+ * ------------------------------------------------------------------
+ * Container principal que simula um quadro escolar e abriga todo o conteúdo
+ */
 .container-board{
-    position: relative;
-    display: flex;
-    max-width: 1500px;
-    height: 85vh;
-    margin: 0 auto;
-    background-color: var(--laranja-board);
-    border-radius: 20px;
-    border: 1px solid #000000;
+    position: relative;     /* Permite posicionamento absoluto de elementos filhos */
+    display: flex;          /* Layout flexível */
+    max-width: 1500px;      /* Largura máxima */
+    height: 85vh;           /* Altura proporcional à viewport */
+    margin: 0 auto;         /* Centraliza horizontalmente */
+    background-color: var(--laranja-board); /* Cor marrom do quadro */
+    border-radius: 20px;    /* Bordas arredondadas */
+    border: 1px solid #000000; /* Borda fina */
+    /* Sombra externa e interna para efeito de profundidade */
     box-shadow: 0 8px 30px rgba(0,0,0,0.35), 0 0 40px rgba(0,0,0,0.15) inset;
-    z-index: 0;
-    overflow: hidden;
+    z-index: 0;             /* Camada base */
+    overflow: hidden;       /* Esconde conteúdo que ultrapassar os limites */
 }
 
+/**
+ * CONTAINER DE DESCRIÇÃO
+ * ------------------------------------------------------------------
+ * Seção que contém o texto de descrição/apresentação na página inicial
+ */
 .container-description{
-    position: absolute;
-    top: 15%;
-    right: 14%;
-    height: 60%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
-    background-color: rgba(29, 33, 35, 0.95);
-    border-radius: 15px;
-    border: 1px solid rgba(0,0,0,0.5);
+    position: absolute;     /* Posicionamento absoluto dentro do quadro */
+    top: 15%;               /* Posição vertical */
+    right: 14%;             /* Posição horizontal (à direita) */
+    height: 60%;            /* Altura proporcional */
+    width: 30%;             /* Largura proporcional */
+    display: flex;          /* Layout flexível */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    gap: 20px;              /* Espaçamento entre elementos filhos */
+    padding: 30px;          /* Espaçamento interno */
+    background-color: rgba(29, 33, 35, 0.95); /* Fundo escuro semi-transparente */
+    border-radius: 15px;    /* Bordas arredondadas */
+    border: 1px solid rgba(0,0,0,0.5); /* Borda sutil */
+    /* Sombras para efeito de profundidade */
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    overflow-wrap: break-word;
-    z-index: 2;
-    backdrop-filter: blur(5px);
-    color: var(--branco);
-
+    overflow-wrap: break-word; /* Quebra palavras longas que ultrapassem o container */
+    z-index: 2;             /* Camada acima */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+    color: var(--branco);   /* Cor do texto */
 }
 
+/**
+ * CONTAINER DE IMAGEM DE PERFIL
+ * ------------------------------------------------------------------
+ * Seção que contém a imagem de perfil e nome na página inicial
+ */
 .container-image{
-    position: absolute;
-    top: 10%;
-    left: 8%;
-    height: 80%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(29, 33, 35, 0.95);
-    align-items: center;
-    gap: 30px;
-    border: 1px solid rgba(0,0,0,0.5);
-    border-radius: 15px;
+    position: absolute;     /* Posicionamento absoluto dentro do quadro */
+    top: 10%;               /* Posição vertical */
+    left: 8%;               /* Posição horizontal (à esquerda) */
+    height: 80%;            /* Altura proporcional */
+    width: 50%;             /* Largura proporcional */
+    display: flex;          /* Layout flexível */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    background-color: rgba(29, 33, 35, 0.95); /* Fundo escuro semi-transparente */
+    align-items: center;    /* Centraliza horizontalmente o conteúdo */
+    gap: 30px;              /* Espaçamento entre elementos filhos */
+    border: 1px solid rgba(0,0,0,0.5); /* Borda sutil */
+    border-radius: 15px;    /* Bordas arredondadas */
+    /* Sombras para efeito de profundidade */
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    z-index: 1;
-    backdrop-filter: blur(5px);
-     
-    }
+    z-index: 1;             /* Camada intermediária */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
+/* Título dentro do container de imagem (nome) */
 .container-image h1{
-
-        font-size: 1.7rem;
-        
-        color: #fdfdfd;
-    }
+    font-size: 1.7rem;     /* Tamanho da fonte */
+    color: #fdfdfd;        /* Cor branca para o texto */
+}
 
 
+/**
+ * IMAGEM DE PERFIL
+ * ------------------------------------------------------------------
+ * Estilização da imagem de perfil circular
+ */
 .container-image-border{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    }
+    width: 200px;          /* Tamanho fixo */
+    height: 200px;         /* Formato quadrado */
+    border-radius: 50%;    /* Transforma em círculo */
+    overflow: hidden;      /* Esconde partes da imagem que ultrapassam o círculo */
+}
 
-    img{
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-    }
+/* Estilização da imagem dentro do container */
+img{
+    display: block;        /* Remove espaço extra abaixo da imagem */
+    width: 100%;           /* Ocupa toda a largura do container */
+    height: 100%;          /* Ocupa toda a altura do container */
+    object-fit: cover;     /* Corta a imagem para preencher o espaço mantendo proporções */
+    border-radius: 50%;    /* Garante que a imagem seja circular */
+}
 
 
+/**
+ * CONTAINER CINZA LATERAL
+ * ------------------------------------------------------------------
+ * Container decorativo na lateral direita do quadro
+ */
 .container-gray-right{
-    position: absolute;
-    top: 10%;
-    right: 8%;
-    height: 80%;
-    width: 12%;
-    background-color: rgba(29, 33, 35, 0.95);
-    border-radius: 20px;
-    border: 1px solid rgba(0,0,0,0.5);
+    position: absolute;     /* Posicionamento absoluto dentro do quadro */
+    top: 10%;               /* Posição vertical */
+    right: 8%;              /* Posição horizontal (à direita) */
+    height: 80%;            /* Altura proporcional */
+    width: 12%;             /* Largura proporcional */
+    background-color: rgba(29, 33, 35, 0.95); /* Fundo escuro semi-transparente */
+    border-radius: 20px;    /* Bordas arredondadas */
+    border: 1px solid rgba(0,0,0,0.5); /* Borda sutil */
+    /* Sombras para efeito de profundidade */
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    z-index: 1;
-    backdrop-filter: blur(5px);
+    z-index: 1;             /* Camada intermediária */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 
-/* Social media styling */
+/**
+ * CONTAINERS DE REDES SOCIAIS E CONTATO
+ * ------------------------------------------------------------------
+ * Estilização dos containers que exibem informações de redes sociais
+ * e idiomas no lado direito das páginas
+ */
 .container-social {
-    position: absolute;
-    top: 10%;
-    right: 8%;
-    height: 72%;
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(29, 33, 35, 0.95);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(0,0,0,0.5);
+    position: absolute;     /* Posicionamento absoluto dentro do quadro */
+    top: 10%;               /* Posição vertical */
+    right: 8%;              /* Posição horizontal (à direita) */
+    height: 72%;            /* Altura proporcional */
+    width: 35%;             /* Largura proporcional */
+    display: flex;          /* Layout flexível */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    align-items: center;    /* Centraliza horizontalmente o conteúdo */
+    background-color: rgba(29, 33, 35, 0.95); /* Fundo escuro semi-transparente */
+    padding: 30px;          /* Espaçamento interno */
+    border-radius: 15px;    /* Bordas arredondadas */
+    border: 1px solid rgba(0,0,0,0.5); /* Borda sutil */
+    /* Sombras para efeito de profundidade */
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    gap: 20px;
-    z-index: 1;
-    backdrop-filter: blur(5px);
+    gap: 20px;              /* Espaçamento entre elementos filhos */
+    z-index: 1;             /* Camada intermediária */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 
+/**
+ * TÍTULOS DOS CONTAINERS
+ * ------------------------------------------------------------------
+ * Estilização dos títulos de seção nos containers sociais
+ */
 .container-social h2, .container-social-esquerdo h2 {
-    color: var(--destaque);
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    position: relative;
-    padding-bottom: 15px;
-    text-align: center;
-    text-shadow: 0 2px 3px rgba(0,0,0,0.3);
-    letter-spacing: 0.5px;
+    color: var(--destaque);  /* Cor destacada (âmbar) */
+    font-size: 1.6rem;       /* Tamanho da fonte */
+    margin-bottom: 15px;     /* Margem inferior */
+    position: relative;      /* Para posicionamento do pseudo-elemento */
+    padding-bottom: 15px;    /* Espaçamento para a linha decorativa */
+    text-align: center;      /* Centraliza o texto */
+    text-shadow: 0 2px 3px rgba(0,0,0,0.3); /* Sombra sutil no texto */
+    letter-spacing: 0.5px;   /* Espaçamento entre letras */
 }
 
+/* Linha decorativa abaixo dos títulos */
 .container-social h2::after, .container-social-esquerdo h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: var(--cinza-caneta);
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    content: "";            /* Necessário para pseudo-elementos */
+    position: absolute;     /* Posicionamento absoluto */
+    bottom: 0;              /* Alinhado à parte inferior */
+    left: 50%;              /* Centralizado */
+    transform: translateX(-50%); /* Ajuste fino da centralização */
+    width: 80px;            /* Largura fixa */
+    height: 3px;            /* Altura da linha */
+    background-color: var(--cinza-caneta); /* Cor azul (caneta) */
+    border-radius: 3px;     /* Arredondamento das bordas */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Sombra sutil */
 }
 
+/**
+ * CONTAINER SOCIAL ESQUERDO (FORMAÇÕES E OUTRAS SEÇÕES)
+ * ------------------------------------------------------------------
+ * Container para informações mais extensas que ficam no lado esquerdo
+ */
 .container-social-esquerdo {
-    position: absolute;
-    top: 10%;
-    left: 8%;
-    height: 72%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: rgba(29, 33, 35, 0.95);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(0,0,0,0.5);
+    position: absolute;     /* Posicionamento absoluto dentro do quadro */
+    top: 10%;               /* Posição vertical */
+    left: 8%;               /* Posição horizontal (à esquerda) */
+    height: 72%;            /* Altura proporcional */
+    width: 50%;             /* Largura proporcional - mais largo que o direito */
+    display: flex;          /* Layout flexível */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    align-items: flex-start; /* Alinha elementos à esquerda */
+    background-color: rgba(29, 33, 35, 0.95); /* Fundo escuro semi-transparente */
+    padding: 30px;          /* Espaçamento interno */
+    border-radius: 15px;    /* Bordas arredondadas */
+    border: 1px solid rgba(0,0,0,0.5); /* Borda sutil */
+    /* Sombras para efeito de profundidade */
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    gap: 10px;
-    z-index: 1;
-    backdrop-filter: blur(5px);
-    overflow-y: auto;
+    gap: 10px;              /* Espaçamento entre elementos filhos */
+    z-index: 1;             /* Camada intermediária */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+    overflow-y: auto;       /* Adiciona barra de rolagem vertical quando necessário */
 }
 
+/**
+ * ÍCONES DE REDES SOCIAIS
+ * ------------------------------------------------------------------
+ * Estilização dos botões de redes sociais na página de contato
+ */
 .social-icon {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 20px;
-    background-color: rgba(30, 39, 46, 0.8);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 160, 0, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    color: var(--branco);
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    width: 85%;
-    margin: 0 auto;
-    backdrop-filter: blur(5px);
+    display: flex;          /* Layout flexível para alinhar ícone e texto */
+    align-items: center;    /* Alinhamento vertical ao centro */
+    gap: 12px;              /* Espaço entre ícone e texto */
+    padding: 14px 20px;     /* Espaçamento interno */
+    background-color: rgba(30, 39, 46, 0.8); /* Fundo escuro semi-transparente */
+    border-radius: 10px;    /* Bordas bem arredondadas */
+    border: 1px solid rgba(255, 160, 0, 0.2); /* Borda sutil na cor de destaque */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    color: var(--branco);   /* Cor do texto */
+    text-decoration: none;  /* Remove sublinhado de links */
+    font-weight: 500;       /* Peso médio da fonte */
+    transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+    font-size: 1rem;        /* Tamanho da fonte */
+    width: 85%;             /* Largura proporcional */
+    margin: 0 auto;         /* Centralização horizontal */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 
+/* Efeito de hover nos ícones sociais */
 .social-icon:hover {
-    background-color: var(--destaque);
-    color: #111;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), 0 0 20px rgba(255, 160, 0, 0.15);
-    border-color: transparent;
+    background-color: var(--destaque); /* Muda para cor de destaque (âmbar) */
+    color: #111;            /* Texto mais escuro para contraste */
+    transform: translateY(-3px); /* Efeito de elevação */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), 0 0 20px rgba(255, 160, 0, 0.15); /* Sombra mais destacada */
+    border-color: transparent; /* Remove a borda */
 }
 
+/**
+ * ÍCONES SVG DAS REDES SOCIAIS 
+ * ------------------------------------------------------------------
+ * Estilização dos ícones SVG dentro dos botões de redes sociais
+ */
 .social-icon svg {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+    width: 24px;            /* Largura fixa */
+    height: 24px;           /* Altura fixa (quadrado) */
+    flex-shrink: 0;         /* Impede que o ícone seja comprimido */
+    transition: all 0.3s ease; /* Transição suave para efeitos */
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3)); /* Sombra suave */
 }
 
+/* Efeito de hover nos ícones SVG */
 .social-icon:hover svg {
-    transform: scale(1.1);
-    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4));
+    transform: scale(1.1);  /* Efeito de aumento sutil */
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4)); /* Sombra mais pronunciada */
 }
 
-/* Estilos específicos para a seção de formações */
+/**
+ * SEÇÃO DE FORMAÇÕES ACADÊMICAS
+ * ------------------------------------------------------------------
+ * Estilização da seção de formações na página de formação
+ */
 .container-social-esquerdo section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width: 100%;           /* Ocupa toda a largura do container */
+    display: flex;         /* Layout flexível */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    gap: 10px;             /* Espaçamento entre itens */
 }
 
+/* Título da seção de formação */
 .container-social-esquerdo h2 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
+    width: 100%;           /* Ocupa toda a largura */
+    text-align: center;    /* Centralização do texto */
+    margin-bottom: 20px;   /* Espaçamento inferior */
 }
 
+/**
+ * ITENS DE FORMAÇÃO - TÍTULOS
+ * ------------------------------------------------------------------
+ * Estilização dos títulos de cada formação (primeiro p de cada conjunto)
+ */
 .container-social-esquerdo p:nth-child(3n+1) {
-    color: var(--destaque);
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-left: 25px;
-    border-top: 1px solid rgba(255, 160, 0, 0.2);
-    position: relative;
+    color: var(--destaque);  /* Cor âmbar para destaque */
+    font-size: 1.3rem;       /* Tamanho maior para títulos */
+    font-weight: 600;        /* Peso da fonte semi-negrito */
+    margin-top: 20px;        /* Espaçamento superior */
+    padding-top: 20px;       /* Padding superior */
+    padding-left: 25px;      /* Espaço para o ícone */
+    border-top: 1px solid rgba(255, 160, 0, 0.2); /* Linha separadora sutil */
+    position: relative;      /* Para posicionamento do pseudo-elemento */
 }
 
+/* Ícone decorativo antes de cada título de formação */
 .container-social-esquerdo p:nth-child(3n+1)::before {
-    content: "✦";
-    position: absolute;
-    left: 0;
-    color: var(--cinza-caneta);
-    font-size: 1.2rem;
-    top: calc(50% - 2px);
-    transform: translateY(-50%);
-    text-shadow: 0 0 8px rgba(10, 189, 227, 0.4);
+    content: "✦";           /* Símbolo de estrela */
+    position: absolute;     /* Posicionamento absoluto */
+    left: 0;                /* Alinhado à esquerda */
+    color: var(--cinza-caneta); /* Cor azul (caneta) */
+    font-size: 1.2rem;      /* Tamanho do ícone */
+    top: calc(50% - 2px);   /* Alinhamento vertical com ajuste fino */
+    transform: translateY(-50%); /* Centralização vertical */
+    text-shadow: 0 0 8px rgba(10, 189, 227, 0.4); /* Brilho azul */
 }
 
+/* Ícone especial para o primeiro item (formação principal) */
 .container-social-esquerdo p:nth-child(1)::before {
-    content: "★";
-    color: var(--cinza-caneta);
+    content: "★";           /* Símbolo de estrela diferente */
+    color: var(--cinza-caneta); /* Cor azul (caneta) */
 }
 
+/**
+ * ITENS DE FORMAÇÃO - DESCRIÇÕES
+ * ------------------------------------------------------------------
+ * Estilização do texto de descrição de cada formação (segundo p de cada conjunto)
+ */
 .container-social-esquerdo p:nth-child(3n+2) {
-    color: var(--branco);
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-left: 10px;
+    color: var(--branco);   /* Cor branca para legibilidade */
+    font-size: 1.1rem;      /* Tamanho intermediário */
+    font-weight: 500;       /* Peso médio */
+    margin-left: 10px;      /* Recuo para criar hierarquia visual */
 }
 
+/**
+ * ITENS DE FORMAÇÃO - DATAS/INSTITUIÇÕES
+ * ------------------------------------------------------------------
+ * Estilização das informações complementares (terceiro p de cada conjunto)
+ */
 .container-social-esquerdo p:nth-child(3n+3) {
-    color: var(--texto-escuro);
-    font-size: 0.9rem;
-    font-style: italic;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    color: var(--texto-escuro); /* Cor mais clara para informações secundárias */
+    font-size: 0.9rem;      /* Tamanho menor */
+    font-style: italic;     /* Estilo itálico para diferenciar */
+    margin-left: 10px;      /* Mesmo recuo do item anterior */
+    margin-bottom: 10px;    /* Espaçamento inferior */
 }
 
-/* Efeitos de hover para os elementos de formação */
+/**
+ * EFEITOS DE HOVER NA SEÇÃO DE FORMAÇÃO
+ * ------------------------------------------------------------------
+ * Animações e efeitos interativos para os elementos de formação
+ */
+
+/* Hover no título da formação */
 .container-social-esquerdo p:nth-child(3n+1):hover {
-    color: var(--cinza-caneta);
-    transform: translateX(5px);
-    transition: all 0.3s ease;
+    color: var(--cinza-caneta); /* Muda para cor azul (caneta) */
+    transform: translateX(5px); /* Efeito de movimento horizontal */
+    transition: all 0.3s ease;  /* Transição suave */
 }
 
+/* Hover no ícone do título */
 .container-social-esquerdo p:nth-child(3n+1):hover::before {
-    color: var(--destaque);
-    transform: translateY(-50%) scale(1.2);
-    transition: all 0.3s ease;
+    color: var(--destaque);    /* Muda para cor âmbar */
+    transform: translateY(-50%) scale(1.2); /* Aumenta o tamanho */
+    transition: all 0.3s ease; /* Transição suave */
 }
 
+/* Hover na descrição da formação */
 .container-social-esquerdo p:nth-child(3n+2):hover {
-    color: var(--cinza-caneta);
-    transform: translateX(8px);
-    transition: all 0.3s ease;
+    color: var(--cinza-caneta); /* Muda para cor azul (caneta) */
+    transform: translateX(8px); /* Efeito de movimento horizontal maior */
+    transition: all 0.3s ease;  /* Transição suave */
 }
 
+/* Hover nas informações complementares */
 .container-social-esquerdo p:nth-child(3n+3):hover {
-    color: var(--destaque);
-    transition: all 0.3s ease;
+    color: var(--destaque);    /* Muda para cor âmbar */
+    transition: all 0.3s ease; /* Transição suave */
 }
 
+/**
+ * EFEITOS DE HOVER NO CONTAINER SOCIAL (IDIOMAS)
+ * ------------------------------------------------------------------
+ * Animações e efeitos interativos para os elementos no container direito
+ */
+
+/* Hover nos itens de texto */
 .container-social p:hover {
-    color: var(--destaque);
-    transform: translateX(5px);
-    transition: all 0.3s ease;
+    color: var(--destaque);    /* Muda para cor âmbar */
+    transform: translateX(5px); /* Efeito de movimento horizontal */
+    transition: all 0.3s ease;  /* Transição suave */
 }
 
+/* Hover nos ícones antes do texto */
 .container-social p:hover:before {
-    color: var(--cinza-caneta);
-    transform: scale(1.2);
-    transition: all 0.3s ease;
+    color: var(--cinza-caneta); /* Muda para cor azul (caneta) */
+    transform: scale(1.2);      /* Aumenta o tamanho */
+    transition: all 0.3s ease;  /* Transição suave */
 }
 
+/* Hover nas barras indicadoras (para idiomas) */
 .container-social p:hover::after {
-    opacity: 1;
-    box-shadow: 0 1px 5px rgba(10, 189, 227, 0.5);
-    transition: all 0.3s ease;
+    opacity: 1;                /* Aumenta opacidade para destacar */
+    box-shadow: 0 1px 5px rgba(10, 189, 227, 0.5); /* Adiciona brilho azul */
+    transition: all 0.3s ease; /* Transição suave */
 }
 
-/* Estilos para o container idiomas (lado direito) */
+/**
+ * CONTAINER DE IDIOMAS (LADO DIREITO)
+ * ------------------------------------------------------------------
+ * Estilização específica para a seção de idiomas
+ */
 .container-social p {
-    color: var(--branco);
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    color: var(--branco);    /* Cor branca para legibilidade */
+    font-size: 1.1rem;       /* Tamanho da fonte */
+    margin-bottom: 15px;     /* Espaçamento inferior entre itens */
+    position: relative;      /* Para posicionamento do ícone */
+    padding-left: 30px;      /* Espaço para o ícone */
+    display: flex;           /* Layout flexível */
+    align-items: center;     /* Alinhamento vertical */
+    justify-content: space-between; /* Distribuição entre nome e nível */
 }
 
+/* Ícone padrão para idiomas */
 .container-social p:before {
-    content: "🌐";
-    position: absolute;
-    left: 0;
-    color: var(--destaque);
+    content: "🌐";          /* Ícone de globo */
+    position: absolute;     /* Posicionamento absoluto */
+    left: 0;                /* Alinhado à esquerda */
+    color: var(--destaque); /* Cor âmbar */
 }
 
+/**
+ * ÍCONES DE BANDEIRAS PARA IDIOMAS
+ * ------------------------------------------------------------------
+ * Bandeiras específicas para cada idioma
+ */
 .container-social p:nth-child(2):before {
-    content: "🇧🇷";
+    content: "🇧🇷";        /* Bandeira do Brasil para Português */
 }
 
 .container-social p:nth-child(3):before {
-    content: "🇬🇧";
+    content: "🇬🇧";        /* Bandeira do Reino Unido para Inglês */
 }
 
 .container-social p:nth-child(4):before {
-    content: "🇪🇸";
+    content: "🇪🇸";        /* Bandeira da Espanha para Espanhol */
 }
 
+/**
+ * BARRAS DE NÍVEL DE PROFICIÊNCIA
+ * ------------------------------------------------------------------
+ * Barras visuais que indicam o nível de proficiência em cada idioma
+ */
 .container-social p::after {
-    content: "";
-    height: 8px;
-    width: 120px;
+    content: "";            /* Elemento vazio */
+    height: 8px;            /* Altura da barra */
+    width: 120px;           /* Largura máxima da barra */
+    /* Gradiente de azul claro para azul escuro */
     background: linear-gradient(90deg, var(--cinza-caneta) 0%, var(--azul-escuro) 100%);
-    border-radius: 4px;
-    margin-left: 10px;
-    opacity: 0.7;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border-radius: 4px;     /* Bordas arredondadas */
+    margin-left: 10px;      /* Espaçamento à esquerda */
+    opacity: 0.7;           /* Leve transparência */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Sombra sutil */
 }
 
-/* Estilos para os níveis de idioma */
+/**
+ * TEXTO DE NÍVEL DE IDIOMA
+ * ------------------------------------------------------------------
+ * Estilo para o texto que indica o nível de proficiência
+ */
 .nivel-idioma {
-    font-size: 0.85rem;
-    color: var(--texto-escuro);
-    font-style: italic;
+    font-size: 0.85rem;     /* Tamanho menor */
+    color: var(--texto-escuro); /* Cor mais clara para informação secundária */
+    font-style: italic;     /* Estilo itálico para diferenciar */
 }
 
-/* Indicadores visuais de nível de proficiência */
+/**
+ * INDICADORES VISUAIS DE NÍVEL DE PROFICIÊNCIA
+ * ------------------------------------------------------------------
+ * Personalização das barras para cada nível específico de idioma
+ */
+
+/* Português (nativo) - barra completa */
 .container-social p:nth-child(2)::after {
-    width: 120px;
+    width: 120px;           /* Largura completa */
+    /* Cor sólida para indicar fluência total */
     background: linear-gradient(90deg, var(--cinza-caneta) 0%, var(--cinza-caneta) 100%);
-    opacity: 0.9;
+    opacity: 0.9;           /* Mais opaco para destacar */
 }
 
+/* Inglês (básico) - barra curta */
 .container-social p:nth-child(3)::after {
-    width: 50px;
+    width: 50px;            /* Largura reduzida */
+    /* Gradiente padrão */
     background: linear-gradient(90deg, var(--cinza-caneta) 0%, var(--azul-escuro) 100%);
-    opacity: 0.6;
+    opacity: 0.6;           /* Mais transparente */
 }
 
+/* Espanhol (básico) - mesma configuração do inglês */
 .container-social p:nth-child(4)::after {
-    width: 50px;
+    width: 50px;            /* Largura reduzida */
     background: linear-gradient(90deg, var(--cinza-caneta) 0%, var(--azul-escuro) 100%);
-    opacity: 0.6;
+    opacity: 0.6;           /* Mais transparente */
 }
 
-/* Contact form styling */
-
+/**
+ * FORMULÁRIO DE CONTATO
+ * ------------------------------------------------------------------
+ * Estilização do formulário na página de contato
+ */
 
 .contato-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    display: flex;           /* Layout flexível */
+    flex-direction: column;  /* Elementos empilhados verticalmente */
+    gap: 20px;               /* Espaçamento entre campos */
+    width: 100%;             /* Largura total disponível */
+    max-width: 500px;        /* Largura máxima para melhor legibilidade */
+    margin: 0 auto;          /* Centralização horizontal */
 }
 
+/**
+ * LABELS DO FORMULÁRIO
+ * ------------------------------------------------------------------
+ * Estilo para os rótulos dos campos do formulário
+ */
 .contato-form label {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--destaque);
-    margin-bottom: -5px;
-    letter-spacing: 0.5px;
+    font-size: 1.1rem;       /* Tamanho da fonte */
+    font-weight: 600;        /* Negrito para destaque */
+    color: var(--destaque);  /* Cor âmbar para destaque */
+    margin-bottom: -5px;     /* Reduz o espaço entre o label e o campo */
+    letter-spacing: 0.5px;      /* Espaçamento entre letras */
 }
 
+/**
+ * CAMPOS DO FORMULÁRIO
+ * ------------------------------------------------------------------
+ * Estilo para os campos de entrada e áreas de texto
+ */
 .contato-form input, 
 .contato-form textarea {
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.1);
-    font-size: 1rem;
-    background-color: rgba(30, 39, 46, 0.8);
-    color: var(--branco);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
+    padding: 14px;           /* Espaçamento interno */
+    border-radius: 8px;      /* Bordas arredondadas */
+    border: 1px solid rgba(255,255,255,0.1); /* Borda sutil */
+    font-size: 1rem;         /* Tamanho da fonte */
+    background-color: rgba(30, 39, 46, 0.8); /* Fundo escuro semi-transparente */
+    color: var(--branco);    /* Texto branco para contraste */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra sutil */
+    transition: all 0.3s ease; /* Transição suave para efeitos */
 }
 
+/**
+ * ESTADO DE FOCO NOS CAMPOS
+ * ------------------------------------------------------------------
+ * Estilização quando o campo está selecionado/focado
+ */
 .contato-form input:focus, 
 .contato-form textarea:focus {
-    outline: none;
-    border-color: var(--destaque);
-    background-color: rgba(30, 39, 46, 1);
+    outline: none;           /* Remove o contorno padrão do navegador */
+    border-color: var(--destaque); /* Borda na cor de destaque */
+    background-color: rgba(30, 39, 46, 1); /* Fundo ligeiramente mais escuro */
+    /* Sombra mais pronunciada e brilho na cor de destaque */
     box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 0 0 2px rgba(255, 160, 0, 0.2);
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Efeito de elevação sutil */
 }
 
+/**
+ * BOTÃO DE ENVIO
+ * ------------------------------------------------------------------
+ * Estilização do botão de envio do formulário
+ */
 .button {
-    background-color: var(--destaque);
-    color: #111;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background-color: var(--destaque); /* Cor âmbar para destaque */
+    color: #111;             /* Texto escuro para contraste */
+    padding: 14px 24px;      /* Espaçamento interno generoso */
+    border: none;            /* Remove a borda */
+    border-radius: 6px;      /* Bordas arredondadas */
+    font-size: 1.1rem;       /* Tamanho da fonte */
+    font-weight: bold;       /* Texto em negrito */
+    cursor: pointer;         /* Cursor de mão ao passar por cima */
+    transition: all 0.3s ease; /* Transição suave para efeitos */
+    /* Sombra com brilho na cor do botão */
     box-shadow: 0 2px 10px rgba(255, 160, 0, 0.3), 0 0 20px rgba(255, 160, 0, 0.1);
-    letter-spacing: 0.5px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;   /* Espaçamento entre letras */
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3); /* Sombra sutil no texto */
 }
 
+/**
+ * EFEITO DE HOVER NO BOTÃO
+ * ------------------------------------------------------------------
+ * Estilização quando o mouse passa sobre o botão
+ */
 .button:hover {
-    background-color: #FFB74D;
-    transform: translateY(-3px);
+    background-color: #FFB74D; /* Tom mais claro de âmbar */
+    transform: translateY(-3px); /* Efeito de elevação */
+    /* Sombra mais intensa com brilho expandido */
     box-shadow: 0 5px 15px rgba(255, 160, 0, 0.4), 0 0 30px rgba(255, 160, 0, 0.2);
 }
 
-/* Media queries para responsividade dos elementos de formação */
+/**
+ * MEDIA QUERIES PARA RESPONSIVIDADE
+ * ------------------------------------------------------------------
+ * Ajustes de estilo para diferentes tamanhos de tela
+ */
+
+/**
+ * TELAS MÉDIAS (tablets, notebooks pequenos)
+ * Largura máxima de 900px
+ */
 @media screen and (max-width: 900px) {
+    /* Reduz a largura dos containers para melhor encaixe */
     .container-social-esquerdo {
-        width: 45%;
+        width: 45%;         /* Reduz ligeiramente a largura */
     }
     
     .container-social {
-        width: 40%;
+        width: 40%;         /* Reduz ligeiramente a largura */
     }
     
+    /* Ajusta tamanhos de fonte para melhor legibilidade */
     .formacao-item p:first-child {
-        font-size: 1.1rem;
+        font-size: 1.1rem;  /* Tamanho menor para títulos */
     }
     
     .formacao-categoria {
-        font-size: 1.3rem !important;
+        font-size: 1.3rem !important; /* Tamanho menor para categorias */
     }
 }
 
+/**
+ * TELAS PEQUENAS (tablets verticais, smartphones grandes)
+ * Largura máxima de 768px
+ */
 @media screen and (max-width: 768px) {
+    /* Converte layout para pilha vertical */
     .container-social-esquerdo,
     .container-social {
-        position: static;
-        width: 90%;
-        margin: 20px auto;
+        position: static;    /* Remove posicionamento absoluto */
+        width: 90%;          /* Quase largura total */
+        margin: 20px auto;   /* Margens automáticas horizontais para centralizar */
     }
     
+    /* Oculta elementos decorativos que não cabem bem em telas pequenas */
     .suporte-grampo,
     .suporte-grampo-2 {
-        display: none;
+        display: none;       /* Remove os grampos decorativos */
     }
     
+    /* Controla a ordem dos elementos na pilha vertical */
     .container-social-esquerdo {
-        order: 1;
+        order: 1;            /* Coloca primeiro */
     }
     
     .container-social {
-        order: 2;
+        order: 2;            /* Coloca segundo */
     }
     
+    /* Converte o quadro para layout de coluna */
     .container-board {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Empilha elementos verticalmente */
     }
 }
 
+/**
+ * TELAS MUITO PEQUENAS (smartphones)
+ * Largura máxima de 600px
+ */
 @media screen and (max-width: 600px) {
+    /* Reduz ainda mais os tamanhos de fonte para telas pequenas */
     .formacao-item p:first-child {
-        font-size: 1rem;
+        font-size: 1rem;     /* Títulos menores */
     }
     
     .formacao-item p:nth-child(2) {
-        font-size: 0.9rem;
+        font-size: 0.9rem;   /* Descrições menores */
     }
     
     .formacao-item p:nth-child(3) {
-        font-size: 0.8rem;
+        font-size: 0.8rem;   /* Informações complementares menores */
     }
     
     .formacao-categoria {
-        font-size: 1.2rem !important;
+        font-size: 1.2rem !important; /* Categorias menores */
     }
     
+    /* Ajustes para a seção de idiomas */
     .container-social p {
-        font-size: 0.95rem;
+        font-size: 0.95rem;  /* Texto menor */
     }
     
     .nivel-idioma {
-        font-size: 0.8rem;
+        font-size: 0.8rem;   /* Níveis de idioma menores */
     }
 }
 
-/* Novos estilos para as formações agrupadas */
+/**
+ * ESTILOS PARA ITENS DE FORMAÇÃO AGRUPADOS
+ * ------------------------------------------------------------------
+ * Versão mais moderna e organizada para mostrar os itens de formação
+ */
 .formacao-item {
-    margin-bottom: 15px;
-    padding-left: 25px;
-    position: relative;
-    border-left: 2px solid rgba(10, 189, 227, 0.3);
-    transition: all 0.3s ease;
+    margin-bottom: 15px;    /* Espaço entre itens */
+    padding-left: 25px;     /* Espaçamento à esquerda */
+    position: relative;     /* Para posicionamento do pseudo-elemento */
+    border-left: 2px solid rgba(10, 189, 227, 0.3); /* Barra lateral azul */
+    transition: all 0.3s ease; /* Transição suave para efeitos */
 }
 
+/* Efeito hover nos itens de formação */
 .formacao-item:hover {
-    border-left: 2px solid var(--cinza-caneta);
-    background-color: rgba(30, 39, 46, 0.6);
-    border-radius: 0 5px 5px 0;
-    transform: translateX(3px);
+    border-left: 2px solid var(--cinza-caneta); /* Borda azul mais viva */
+    background-color: rgba(30, 39, 46, 0.6);    /* Fundo semi-transparente */
+    border-radius: 0 5px 5px 0;                 /* Bordas arredondadas à direita */
+    transform: translateX(3px);                 /* Efeito de movimento horizontal */
 }
 
+/* Título principal de cada item de formação */
 .formacao-item p:first-child {
-    color: var(--destaque);
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    position: relative;
+    color: var(--destaque);  /* Cor âmbar para destaque */
+    font-size: 1.2rem;       /* Tamanho da fonte */
+    font-weight: 600;        /* Peso semibold */
+    margin-bottom: 5px;      /* Espaço abaixo */
+    position: relative;      /* Para posicionamento do pseudo-elemento */
 }
 
+/* Ícone decorativo antes do título do item */
 .formacao-item p:first-child::before {
-    content: "✦";
-    position: absolute;
-    left: -25px;
-    color: var(--cinza-caneta);
-    font-size: 1.1rem;
-    text-shadow: 0 0 8px rgba(10, 189, 227, 0.4);
+    content: "✦";           /* Símbolo de estrela */
+    position: absolute;     /* Posicionamento absoluto */
+    left: -25px;            /* Posicionado na borda lateral */
+    color: var(--cinza-caneta); /* Cor azul (caneta) */
+    font-size: 1.1rem;      /* Tamanho do símbolo */
+    text-shadow: 0 0 8px rgba(10, 189, 227, 0.4); /* Brilho azul */
 }
 
+/* Descrição do item de formação */
 .formacao-item p:nth-child(2) {
-    color: var(--branco);
-    font-size: 1rem;
-    font-weight: 500;
-    margin-left: 5px;
-    margin-bottom: 3px;
+    color: var(--branco);   /* Cor branca para legibilidade */
+    font-size: 1rem;        /* Tamanho da fonte */
+    font-weight: 500;       /* Peso médio */
+    margin-left: 5px;       /* Recuo para criar hierarquia visual */
+    margin-bottom: 3px;     /* Espaço abaixo */
 }
 
+/* Informações complementares do item de formação */
 .formacao-item p:nth-child(3) {
-    color: var(--texto-escuro);
-    font-size: 0.85rem;
-    font-style: italic;
-    margin-left: 5px;
+    color: var(--texto-escuro); /* Cor mais clara para informações secundárias */
+    font-size: 0.85rem;     /* Tamanho menor */
+    font-style: italic;     /* Estilo itálico para diferenciar */
+    margin-left: 5px;       /* Recuo para manter alinhamento */
 }
 
+/**
+ * TÍTULO DE CATEGORIA DE FORMAÇÃO
+ * ------------------------------------------------------------------
+ * Títulos que separam as diferentes categorias (ex: "Cursos")
+ */
 .formacao-categoria {
-    color: var(--cinza-caneta) !important;
-    font-size: 1.4rem !important;
-    font-weight: 700 !important;
-    margin-top: 20px !important;
-    margin-bottom: 15px !important;
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(10, 189, 227, 0.2);
-    text-shadow: 0 0 10px rgba(10, 189, 227, 0.2);
-    letter-spacing: 1px;
+    color: var(--cinza-caneta) !important; /* Cor azul (caneta) */
+    font-size: 1.4rem !important;          /* Tamanho maior */
+    font-weight: 700 !important;           /* Negrito */
+    margin-top: 20px !important;           /* Espaço acima */
+    margin-bottom: 15px !important;        /* Espaço abaixo */
+    text-align: center;                    /* Centralizado */
+    padding-top: 20px;                     /* Padding acima */
+    border-top: 1px solid rgba(10, 189, 227, 0.2); /* Linha separadora sutil */
+    text-shadow: 0 0 10px rgba(10, 189, 227, 0.2); /* Brilho sutil */
+    letter-spacing: 1px;                   /* Espaçamento entre letras */
 }
 
+/* Remove o ícone de estrela dos títulos de categoria */
 .formacao-categoria::before {
-    content: none !important;
+    content: none !important; /* Desativa o pseudo-elemento */
 }
 

@@ -1,47 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- 
+  Página de formações e idiomas
+  Exibe informações acadêmicas, cursos e conhecimento em idiomas
+-->
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formacao</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./style.css">
-    
+    <title>Formação</title>
+    <!-- Folhas de estilo do projeto -->
+    <link rel="stylesheet" href="./reset.css">  <!-- Normalização de estilos entre navegadores -->
+    <link rel="stylesheet" href="./global.css"> <!-- Estilos globais e componentes reutilizáveis -->
+    <link rel="stylesheet" href="./style.css">  <!-- Estilos específicos de componentes -->
 </head>
 
 <body>
-    <span class="caneta"></span>
-    <span class="caneta-tampinha"></span>
-    <span class="suporte-lateral-1"></span>
-        <span class="furo-board-1"></span>
-        <span class="suporte-lateral-2"></span>
-        <span class="furo-board-2"></span>
-    <header class="header">
+    <!-- Elementos decorativos do quadro escolar -->
+    <span class="caneta"></span>           <!-- Caneta (parte superior) -->
+    <span class="caneta-tampinha"></span>  <!-- Caneta (corpo) -->
     
+    <!-- Suportes superiores do quadro -->
+    <span class="suporte-lateral-1"></span>
+    <span class="furo-board-1"></span>
+    <span class="suporte-lateral-2"></span>
+    <span class="furo-board-2"></span>
+    
+    <!-- Cabeçalho com navegação -->
+    <header class="header">
         <nav class="header-nav">
             <ul>
                 <li><a href="index.html">Sobre</a></li>
-                <li><a href="portifolio.html">Portifolio</a></li>
-                <li><a href="formacao.html">Formacao</a></li>
+                <li><a href="portifolio.html">Portfólio</a></li>
+                <li><a href="formacao.html">Formação</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Conteúdo principal (quadro escolar) -->
     <main class="container-board">
+        <!-- Elementos decorativos laterais -->
         <span class="container-white-left"></span>
 
+        <!-- Container com formações acadêmicas e cursos -->
         <div class="container-social-esquerdo">
             <h2>Formações</h2>
             <section>
+                <!-- Formação acadêmica principal -->
                 <div class="formacao-item">
                     <p>Ensino Superior</p>
                     <p>Bacharelado em Engenharia de Software</p>
                     <p>UNINTER - Jan/2024 a Dez/2027</p>
                 </div>
 
+                <!-- Separador de categoria -->
                 <p class="formacao-categoria">Cursos</p>
 
+                <!-- Lista de cursos complementares -->
                 <div class="formacao-item">
                     <p>Computer Hardware Basics</p>
                     <p>Cisco Networking Academy - 2024</p>
@@ -74,27 +88,32 @@
             </section>
         </div>
 
+        <!-- Elementos decorativos (grampos) -->
         <span class="suporte-grampo" title="Fixador de documentos"></span>
         <span class="suporte-grampo-2" title="Fixador de documentos"></span>
         
+        <!-- Container com idiomas -->
         <div class="container-social">
             <h2>Idiomas</h2>
+            <!-- Lista de idiomas com níveis de proficiência -->
             <p>Português <span class="nivel-idioma">Nativo (C2)</span></p>
             <p>Inglês <span class="nivel-idioma">Básico (A2)</span></p>
             <p>Espanhol <span class="nivel-idioma">Básico (A2)</span></p>
         </div>
     </main>
 
+    <!-- Rodapé da página -->
     <footer>
+        <!-- Container do rodapé com informações de copyright -->
         <div class="footer-container">
             <p>Copyright &copy; 2025 Iago Trindade Souza. Todos os direitos reservados</p>
         </div>
 
-    <span class="suporte-laterais-3"></span>
-    <span class="furo-board-3"></span>
-    <span class="suporte-laterais-4"></span>
-    <span class="furo-board-4"></span>
-
+        <!-- Elementos decorativos inferiores (suportes do quadro) -->
+        <span class="suporte-laterais-3"></span>
+        <span class="furo-board-3"></span>
+        <span class="suporte-laterais-4"></span>
+        <span class="furo-board-4"></span>
     </footer>
 </body>
 </html>
