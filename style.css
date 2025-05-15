@@ -681,6 +681,13 @@ img{
         display: flex;
         flex-direction: column; /* Empilha elementos verticalmente */
     }
+
+    .caneta{
+        display: none;       /* Remove a caneta decorativa */
+    }
+    .caneta-tampinha{
+        display: none;       /* Remove a tampinha decorativa */
+    }
 }
 
 /**
