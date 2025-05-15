@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./reset.css">  <!-- Normalização de estilos entre navegadores -->
     <link rel="stylesheet" href="./global.css"> <!-- Estilos globais e componentes reutilizáveis -->
     <link rel="stylesheet" href="./style.css">  <!-- Estilos específicos de componentes -->
+    <link rel="stylesheet" href="./index-styles.css"> <!-- Estilos exclusivos para a página index -->
 </head>
 <body>
     <!-- Elementos decorativos do quadro escolar -->
@@ -41,19 +42,78 @@
         <!-- Elementos decorativos laterais -->
         <span class="container-white-left"></span>
         
+        <!-- Elementos decorativos flutuantes -->
+        <div class="decorative-elements">
+            <span class="chalk-mark mark1"></span>
+            <span class="chalk-mark mark2"></span>
+            <span class="chalk-mark mark3"></span>
+            <span class="chalk-dust"></span>
+        </div>
+        
         <!-- Container com foto de perfil e nome -->
         <div class="container-image">
             <div class="container-image-border">
                 <img src="./img/perfil.jpg" alt="Iago Trindade Souza" class="profile-image">
             </div>
             <h1 class="title">Iago Trindade Souza</h1>
+            <p class="role">Estudante de Engenharia de Software</p>
+            
+            <!-- Ícones sociais específicos da página index -->
+            <div class="index-social-icons">
+                <a href="#" class="index-social-icon">
+                    <span>GH</span>
+                </a>
+                <a href="#" class="index-social-icon">
+                    <span>IN</span>
+                </a>
+                <a href="#" class="index-social-icon">
+                    <span>@</span>
+                </a>
+            </div>
+            
+            <!-- Elementos de destaque -->
+            <div class="highlight-box">
+                <div class="highlight-item">
+                    <span class="highlight-number">2+</span>
+                    <span class="highlight-text">Anos de<br>Estudo</span>
+                </div>
+                <div class="highlight-divider"></div>
+                <div class="highlight-item">
+                    <span class="highlight-number">10+</span>
+                    <span class="highlight-text">Projetos<br>Pessoais</span>
+                </div>
+            </div>
         </div>
         
         <!-- Container com texto de apresentação -->
         <div class="container-description">
-            <h1>Olá!</h1>
+            <h1 class="greeting-title">Olá!</h1>
             <h2>Um pouco mais sobre mim</h2>
-            <p>Sou estudante de Engenharia de Software no Centro Universitário Internacional UNINTER, com base em Vitória, Espírito Santo. Minha afinidade com computadores e com a compreensão de seu funcionamento, que começou como um hobby, evoluiu para a escolha da minha carreira. Fora do ambiente acadêmico, cultivo a paixão nacional pelo futebol e dedico-me ao ciclismo, meu esporte predileto.</p>
+            <p>Sou estudante de Engenharia de Software no Centro Universitário Internacional UNINTER, com base em Vitória, Espírito Santo. Minha afinidade com computadores e com a compreensão de seu funcionamento, que começou como um hobby, evoluiu para a escolha da minha carreira.</p>
+            <p>Fora do ambiente acadêmico, cultivo a paixão nacional pelo futebol e dedico-me ao ciclismo, meu esporte predileto.</p>
+            
+            <!-- Seção de habilidades com barras de progresso -->
+            <div class="skills-section">
+                <h3>Principais Habilidades</h3>
+                <div class="skill-item">
+                    <span class="skill-name">HTML/CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">React</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="75%"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- Elementos decorativos laterais -->

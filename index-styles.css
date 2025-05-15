@@ -1,0 +1,385 @@
+/**
+ * ESTILOS ESPECÍFICOS PARA A PÁGINA INDEX
+ * ------------------------------------------------------------------
+ * Este arquivo contém estilos exclusivos para a página inicial
+ * que não afetam outras páginas como a de contato
+ */
+
+/**
+ * MELHORIAS PARA TÍTULOS
+ * ------------------------------------------------------------------
+ */
+
+/* Título de saudação com efeito especial */
+.greeting-title {
+    color: var(--destaque);          /* Cor âmbar para destaque */
+    font-size: 2.2rem;               /* Tamanho ampliado */
+    margin-bottom: 5px;              /* Espaço abaixo reduzido */
+    position: relative;              /* Base para efeitos */
+    display: inline-block;           /* Comportamento inline com características de bloco */
+    text-shadow: 0 0 15px rgba(255, 160, 0, 0.3); /* Brilho sutil */
+    animation: greetingPulse 2s ease-in-out infinite alternate; /* Animação pulsante */
+}
+
+/* Animação pulsante para título de saudação */
+@keyframes greetingPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 160, 0, 0.2);
+        transform: scale(1);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 160, 0, 0.5);
+        transform: scale(1.03);
+    }
+}
+
+/* Linha decorativa embaixo do título de saudação */
+.greeting-title::after {
+    content: '';                     /* Conteúdo vazio */
+    position: absolute;              /* Posicionamento absoluto */
+    bottom: -8px;                    /* Posição abaixo do texto */
+    left: 0;                         /* Alinha à esquerda */
+    width: 0;                        /* Inicialmente sem largura */
+    height: 3px;                     /* Altura da linha */
+    background-color: var(--destaque); /* Cor âmbar */
+    animation: lineDrawing 1.5s forwards 0.5s ease; /* Animação de desenho */
+}
+
+/* Animação para linha decorativa */
+@keyframes lineDrawing {
+    to { width: 100%; }              /* Expande para largura total */
+}
+
+/**
+ * ESTILOS PARA FUNÇÃO/CARGO
+ * ------------------------------------------------------------------
+ */
+
+/* Texto de função/cargo sob o nome */
+.role {
+    color: var(--cinza-caneta);      /* Cor azul (caneta) */
+    font-size: 1.2rem;               /* Tamanho médio */
+    margin-top: -20px;               /* Ajuste negativo para aproximar do título */
+    margin-bottom: 20px;             /* Espaço abaixo */
+    font-style: italic;              /* Estilo itálico */
+    opacity: 0.9;                    /* Leve transparência */
+    letter-spacing: 0.5px;           /* Espaçamento entre letras */
+}
+
+/**
+ * ÍCONES SOCIAIS (ESPECÍFICOS PARA INDEX)
+ * ------------------------------------------------------------------
+ */
+
+/* Container para ícones sociais */
+.index-social-icons {
+    display: flex;                   /* Layout flexível */
+    gap: 20px;                       /* Espaçamento entre ícones */
+    margin: 15px 0 25px;             /* Margens verticais e horizontais */
+    justify-content: center;         /* Centralização horizontal */
+}
+
+/* Ícones sociais individuais */
+.index-social-icon {
+    width: 40px;                     /* Largura fixa */
+    height: 40px;                    /* Altura fixa */
+    border-radius: 50%;              /* Forma circular */
+    display: flex;                   /* Layout flexível */
+    align-items: center;             /* Centralização vertical */
+    justify-content: center;         /* Centralização horizontal */
+    background-color: rgba(45, 52, 54, 0.7); /* Fundo escuro semi-transparente */
+    border: 1px solid rgba(10, 189, 227, 0.2); /* Borda azul sutil */
+    color: var(--cinza-caneta);      /* Cor azul (caneta) */
+    text-decoration: none;           /* Remove sublinhado */
+    font-weight: bold;               /* Texto em negrito */
+    font-size: 0.9rem;               /* Tamanho de fonte reduzido */
+    transition: all 0.3s ease;       /* Transição suave */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+/* Efeito hover para ícones sociais */
+.index-social-icon:hover {
+    transform: translateY(-3px);     /* Elevação sutil */
+    background-color: rgba(10, 189, 227, 0.15); /* Fundo azul sutil */
+    box-shadow: 0 5px 15px rgba(10, 189, 227, 0.3); /* Brilho azul */
+    color: var(--branco);            /* Texto branco */
+}
+
+/* Efeito ativo ao clicar */
+.index-social-icon:active {
+    transform: translateY(0);        /* Remove elevação */
+    box-shadow: 0 2px 5px rgba(10, 189, 227, 0.2); /* Reduz sombra */
+}
+
+/**
+ * CAIXA DE DESTAQUES
+ * ------------------------------------------------------------------
+ */
+
+/* Container para itens de destaque */
+.highlight-box {
+    display: flex;                   /* Layout flexível */
+    align-items: center;             /* Centralização vertical */
+    justify-content: center;         /* Centralização horizontal */
+    gap: 5px;                        /* Espaçamento entre itens */
+    margin-top: 10px;                /* Margem superior */
+    padding: 15px;                   /* Espaçamento interno */
+    background-color: rgba(45, 52, 54, 0.4); /* Fundo ligeiramente mais claro */
+    border-radius: 12px;             /* Bordas arredondadas */
+    width: 85%;                      /* Largura proporcional */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3); /* Sombra interna */
+}
+
+/* Item de destaque individual */
+.highlight-item {
+    display: flex;                   /* Layout flexível */
+    flex-direction: column;          /* Empilha elementos verticalmente */
+    align-items: center;             /* Centralização horizontal */
+    padding: 0 15px;                 /* Espaçamento horizontal */
+}
+
+/* Números de destaque */
+.highlight-number {
+    font-size: 1.8rem;               /* Tamanho grande */
+    font-weight: 700;                /* Negrito */
+    color: var(--destaque);          /* Cor âmbar */
+    line-height: 1;                  /* Reduz espaçamento de linha */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra sutil */
+}
+
+/* Texto explicativo do destaque */
+.highlight-text {
+    font-size: 0.8rem;               /* Tamanho pequeno */
+    color: var(--texto-escuro);      /* Cor mais clara para texto secundário */
+    text-align: center;              /* Centralizado */
+    margin-top: 5px;                 /* Espaço acima */
+}
+
+/* Divisor entre itens de destaque */
+.highlight-divider {
+    width: 1px;                      /* Largura fina */
+    height: 40px;                    /* Altura proporcional */
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--cinza-caneta),
+        transparent
+    );                               /* Gradiente para efeito de desvanecimento */
+    opacity: 0.4;                    /* Semi-transparente */
+}
+
+/**
+ * SEÇÃO DE HABILIDADES
+ * ------------------------------------------------------------------
+ */
+
+/* Container da seção de habilidades */
+.skills-section {
+    margin-top: 25px;                /* Espaço acima */
+    padding-top: 15px;               /* Espaçamento interno superior */
+    border-top: 1px solid rgba(10, 189, 227, 0.2); /* Linha separadora sutil */
+}
+
+/* Título da seção de habilidades */
+.skills-section h3 {
+    color: var(--cinza-caneta);      /* Cor azul (caneta) */
+    font-size: 1.3rem;               /* Tamanho médio */
+    margin-bottom: 15px;             /* Espaço abaixo */
+    text-align: center;              /* Centralizado */
+    font-weight: 600;                /* Semi-negrito */
+}
+
+/* Item de habilidade individual */
+.skill-item {
+    margin-bottom: 12px;             /* Espaço abaixo */
+}
+
+/* Nome da habilidade */
+.skill-name {
+    display: block;                  /* Bloco para ocupar linha inteira */
+    margin-bottom: 5px;              /* Espaço abaixo */
+    font-size: 1rem;                 /* Tamanho médio */
+    color: var(--branco);            /* Cor branca */
+}
+
+/* Barra de progresso da habilidade */
+.skill-bar {
+    height: 10px;                    /* Altura da barra */
+    background-color: rgba(45, 52, 54, 0.7); /* Fundo escuro */
+    border-radius: 5px;              /* Bordas arredondadas */
+    overflow: hidden;                /* Esconde overflow */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3); /* Sombra interna */
+}
+
+/* Progresso da habilidade */
+.skill-progress {
+    height: 100%;                    /* Ocupa altura total */
+    background: linear-gradient(90deg, var(--cinza-caneta), #0396BF); /* Gradiente azul */
+    border-radius: 5px;              /* Bordas arredondadas */
+    width: 0;                        /* Inicialmente sem largura */
+    animation: fillProgress 1.5s forwards ease-out; /* Animação de preenchimento */
+    position: relative;              /* Base para elementos de brilho */
+}
+
+/* Define a largura com base no atributo data-level */
+.skill-progress[data-level="90%"] { --final-width: 90%; }
+.skill-progress[data-level="80%"] { --final-width: 80%; }
+.skill-progress[data-level="75%"] { --final-width: 75%; }
+
+/* Animação de preenchimento da barra */
+@keyframes fillProgress {
+    to { width: var(--final-width); }
+}
+
+/* Efeito de brilho na barra de progresso */
+.skill-progress::after {
+    content: '';                     /* Conteúdo vazio */
+    position: absolute;              /* Posicionamento absoluto */
+    top: 0;                          /* Alinhado ao topo */
+    left: -50%;                      /* Posição inicial fora da vista */
+    width: 50%;                      /* Largura */
+    height: 100%;                    /* Altura completa */
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );                               /* Gradiente para efeito de brilho */
+    animation: shineEffect 2s infinite; /* Animação de brilho */
+}
+
+/* Animação de efeito de brilho */
+@keyframes shineEffect {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+
+/**
+ * ELEMENTOS DECORATIVOS
+ * ------------------------------------------------------------------
+ */
+
+/* Container para elementos decorativos */
+.decorative-elements {
+    position: absolute;              /* Posicionamento absoluto */
+    top: 0;                          /* Alinhado ao topo */
+    left: 0;                         /* Alinhado à esquerda */
+    width: 100%;                     /* Largura completa */
+    height: 100%;                    /* Altura completa */
+    pointer-events: none;            /* Ignora interações do mouse */
+    z-index: 1;                      /* Camada acima do fundo */
+}
+
+/* Marcas de giz genéricas */
+.chalk-mark {
+    position: absolute;              /* Posicionamento absoluto */
+    background: rgba(255,255,255,0.3); /* Cor de giz semi-transparente */
+    border-radius: 50%;              /* Formato arredondado */
+    filter: blur(2px);               /* Desfoque sutil */
+    opacity: 0.4;                    /* Semi-transparente */
+}
+
+/* Posicionamento e estilo para cada marca de giz */
+.mark1 {
+    width: 30px;                     /* Largura */
+    height: 15px;                    /* Altura */
+    top: 30%;                        /* Posição vertical */
+    left: 20%;                       /* Posição horizontal */
+    transform: rotate(45deg);        /* Rotação */
+    background: linear-gradient(45deg, rgba(255,255,255,0.4), transparent); /* Gradiente */
+}
+
+.mark2 {
+    width: 25px;                     /* Largura */
+    height: 5px;                     /* Altura */
+    top: 60%;                        /* Posição vertical */
+    right: 25%;                      /* Posição horizontal */
+    transform: rotate(-30deg);       /* Rotação */
+    background: linear-gradient(-30deg, rgba(255,255,255,0.3), transparent); /* Gradiente */
+}
+
+.mark3 {
+    width: 15px;                     /* Largura */
+    height: 15px;                    /* Altura */
+    bottom: 20%;                     /* Posição vertical */
+    left: 40%;                       /* Posição horizontal */
+    border-radius: 2px;              /* Bordas pouco arredondadas */
+    background: rgba(255,255,255,0.2); /* Cor de giz mais sutil */
+}
+
+/* Poeira de giz */
+.chalk-dust {
+    position: absolute;              /* Posicionamento absoluto */
+    width: 80px;                     /* Largura */
+    height: 15px;                    /* Altura */
+    bottom: 5%;                      /* Posição vertical */
+    left: 30%;                       /* Posição horizontal */
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255,255,255,0.3),
+        transparent 70%
+    );                               /* Gradiente radial para efeito de poeira */
+    filter: blur(3px);               /* Desfoque */
+    animation: dustFloat 8s infinite alternate ease-in-out; /* Animação flutuante */
+}
+
+/* Animação flutuante para poeira de giz */
+@keyframes dustFloat {
+    0% {
+        transform: translateX(0) scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateX(20px) scale(1.2);
+        opacity: 0.1;
+    }
+}
+
+/**
+ * MEDIA QUERIES PARA RESPONSIVIDADE
+ * ------------------------------------------------------------------
+ */
+
+/* Telas médias (tablets, notebooks pequenos) */
+@media screen and (max-width: 900px) {
+    .highlight-box {
+        width: 95%;                  /* Aumenta largura */
+    }
+    
+    .skill-name {
+        font-size: 0.95rem;          /* Reduz tamanho da fonte */
+    }
+}
+
+/* Telas pequenas (smartphones, tablets em retrato) */
+@media screen and (max-width: 768px) {
+    .container-image, 
+    .container-description {
+        width: 85%;                  /* Aumenta largura */
+        position: static;            /* Remove posicionamento absoluto */
+        margin: 20px auto;           /* Centraliza com margens */
+        height: auto;                /* Altura automática */
+    }
+    
+    .container-board {
+        height: auto;                /* Altura automática */
+        overflow-y: auto;            /* Adiciona barra de rolagem vertical */
+        display: flex;               /* Layout flexível */
+        flex-direction: column;      /* Organização em coluna */
+        padding: 20px 0 40px;        /* Espaçamentos */
+    }
+    
+    .container-gray-right,
+    .container-white-right,
+    .container-white-left {
+        display: none;               /* Remove elementos decorativos */
+    }
+    
+    .skill-progress::after {
+        animation: none;             /* Remove animação em telas pequenas */
+    }
+    
+    .greeting-title {
+        font-size: 1.8rem;           /* Reduz tamanho do título */
+    }
+}
