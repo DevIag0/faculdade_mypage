@@ -1,0 +1,119 @@
+/**
+ * ESTILOS RESPONSIVOS PARA PÁGINA DE CONTATO
+ * ------------------------------------------------------------------
+ * Este arquivo contém estilos responsivos específicos para a página de contato.
+ * Ele complementa os estilos base definidos em style.css e adapta o layout 
+ * para diferentes tamanhos de tela.
+ */
+
+/**
+ * TELAS MÉDIAS (tablets, notebooks pequenos)
+ * ------------------------------------------------------------------
+ * Largura máxima de 1024px
+ */
+@media screen and (max-width: 1024px) {
+    /* Ajustes para o container do formulário */
+    .container-form {
+        width: 40%;         /* Aumenta ligeiramente a largura */
+    }
+    
+    /* Ajustes para o container de redes sociais */
+    .container-social {
+        width: 40%;         /* Aumenta ligeiramente a largura */
+        right: 5%;          /* Ajusta posição à direita */
+    }
+    
+    /* Ajustes para os campos do formulário */
+    .contato-form input, 
+    .contato-form textarea {
+        font-size: 0.95rem;  /* Reduz ligeiramente o tamanho da fonte */
+    }
+}
+
+/**
+ * TELAS PEQUENAS (tablets verticais, smartphones grandes)
+ * ------------------------------------------------------------------
+ * Largura máxima de 768px
+ */
+@media screen and (max-width: 768px) {
+    /* Container principal em layout de coluna */
+    .container-board {
+        display: flex;
+        flex-direction: column; /* Empilha elementos verticalmente */
+        height: auto;         /* Altura automática baseada no conteúdo */
+        min-height: 85vh;     /* Altura mínima para telas pequenas */
+        padding: 30px 10px;   /* Adiciona padding horizontal e vertical */
+        box-sizing: border-box; /* Inclui padding no cálculo da largura */
+    }
+    
+    /* Reposiciona o formulário de contato */
+    .container-form {
+        position: static;     /* Remove posicionamento absoluto */
+        width: 90%;           /* Quase largura total */
+        height: auto;         /* Altura baseada no conteúdo */
+        margin: 20px auto;    /* Centraliza com margens automáticas */
+        padding: 25px;        /* Reduz padding interno */
+        order: 1;             /* Posiciona primeiro na ordem dos elementos */
+    }
+    
+    /* Reposiciona o container de redes sociais */
+    .container-social {
+        position: static;     /* Remove posicionamento absoluto */
+        width: 90%;           /* Quase largura total */
+        height: auto;         /* Altura baseada no conteúdo */
+        margin: 20px auto;    /* Centraliza com margens automáticas */
+        padding: 25px;        /* Reduz padding interno */
+        order: 2;             /* Posiciona segundo na ordem dos elementos */
+    }
+    
+    /* Oculta elementos decorativos em telas pequenas */
+    .container-white-left,
+    .container-white-right {
+        display: none;
+    }
+    
+    /* Aumenta o tamanho dos ícones para melhor toque em dispositivos móveis */
+    .social-icon {
+        padding: 16px 20px;  /* Aumenta área de toque */
+        margin-bottom: 15px; /* Espaço entre os ícones */
+    }
+}
+
+/**
+ * TELAS MUITO PEQUENAS (smartphones)
+ * ------------------------------------------------------------------
+ * Largura máxima de 480px
+ */
+@media screen and (max-width: 480px) {
+    /* Ajustes para o formulário em telas muito pequenas */
+    .contato-form label {
+        font-size: 1rem;     /* Reduz tamanho dos labels */
+    }
+    
+    .contato-form input, 
+    .contato-form textarea {
+        padding: 12px;       /* Reduz padding */
+        font-size: 0.9rem;   /* Reduz tamanho da fonte */
+    }
+    
+    .button {
+        padding: 12px 20px;  /* Reduz padding do botão */
+        font-size: 1rem;     /* Reduz tamanho da fonte */
+    }
+    
+    /* Ajustes para ícones sociais em telas muito pequenas */
+    .social-icon {
+        font-size: 0.9rem;   /* Reduz tamanho da fonte */
+        width: 90%;          /* Aumenta largura para ocupar mais espaço */
+    }
+    
+    .social-icon svg {
+        width: 20px;         /* Reduz tamanho dos ícones */
+        height: 20px;
+    }
+    
+    /* Redução do título */
+    .container-social h2 {
+        font-size: 1.4rem;   /* Título menor */
+    }
+}

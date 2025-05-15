@@ -1,0 +1,82 @@
+/**
+ * ESTILOS DE ESTADO DE FORMULÁRIO 
+ * ------------------------------------------------------------------
+ * Este arquivo contém os estilos específicos para diferentes estados
+ * dos elementos de formulário da página de contato, como hover, focus,
+ * valid, invalid, etc.
+ */
+
+/**
+ * ESTADOS DE INPUT E TEXTAREA
+ * ------------------------------------------------------------------
+ */
+
+/* Estado de foco */
+.contato-form input:focus,
+.contato-form textarea:focus {
+    border-color: var(--destaque);       /* Borda na cor de destaque */
+    box-shadow: 0 0 8px rgba(255, 160, 0, 0.4); /* Brilho âmbar */
+    transform: translateY(-2px);         /* Leve elevação */
+    transition: all 0.3s ease;          /* Transição suave */
+}
+
+/* Estado de input válido */
+.contato-form input:valid,
+.contato-form textarea:valid {
+    border-color: rgba(10, 189, 227, 0.7);  /* Borda azul (caneta) */
+}
+
+/* Estado de input inválido após interação */
+.contato-form input:invalid:not(:focus):not(:placeholder-shown),
+.contato-form textarea:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #e74c3c;              /* Borda vermelha */
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5); /* Brilho vermelho */
+}
+
+/**
+ * ESTADOS DO BOTÃO DE ENVIO
+ * ------------------------------------------------------------------
+ */
+
+/* Estado hover do botão */
+.button:hover {
+    background-color: #FFB74D;          /* Tom mais claro de âmbar */
+    transform: translateY(-3px);         /* Efeito de elevação */
+    box-shadow: 0 5px 15px rgba(255, 160, 0, 0.4); /* Sombra mais pronunciada */
+}
+
+/* Estado de clique do botão */
+.button:active {
+    transform: translateY(-1px);         /* Menos elevação durante o clique */
+    box-shadow: 0 3px 8px rgba(255, 160, 0, 0.4); /* Sombra reduzida */
+}
+
+/* Estado de foco do botão (acessibilidade) */
+.button:focus {
+    outline: none;                      /* Remove contorno padrão */
+    box-shadow: 0 0 0 3px rgba(255, 160, 0, 0.3); /* Contorno personalizado */
+}
+
+/**
+ * ESTADOS DOS ÍCONES SOCIAIS
+ * ------------------------------------------------------------------
+ */
+
+/* Estado hover dos ícones sociais */
+.social-icon:hover {
+    background-color: var(--destaque);  /* Cor âmbar de destaque */
+    color: #111;                        /* Texto escuro para contraste */
+    transform: translateY(-3px);         /* Elevação */
+}
+
+/* Estado hover do SVG dentro dos ícones sociais */
+.social-icon:hover svg {
+    transform: scale(1.1);              /* Efeito de aumento */
+}
+
+/* Estado de foco dos ícones sociais (acessibilidade) */
+.social-icon:focus {
+    outline: none;                      /* Remove contorno padrão */
+    box-shadow: 0 0 0 3px rgba(255, 160, 0, 0.3); /* Contorno personalizado */
+    transform: translateY(-2px);         /* Leve elevação */
+}
