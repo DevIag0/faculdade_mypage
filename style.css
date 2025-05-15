@@ -697,6 +697,10 @@ img{
     .caneta-tampinha{
         display: none;       /* Remove a tampinha decorativa */
     }
+
+    .container-white-left, .container-white-right{
+        display: none;   /* Remove os containers brancos laterais */   
+    }
 }
 
 /**
