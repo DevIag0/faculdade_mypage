@@ -4,10 +4,16 @@
  * Este arquivo contém os estilos específicos para diferentes estados
  * dos elementos de formulário da página de contato, como hover, focus,
  * valid, invalid, etc.
+ *
+ * ESTRUTURA DE ORGANIZAÇÃO:
+ * 1. ESTADOS DE INPUT E TEXTAREA (Focus, Valid, Invalid)
+ * 2. ESTADOS DO BOTÃO DE ENVIO (Hover, Active, Focus)
+ * 3. ESTADOS DOS ÍCONES SOCIAIS (Hover, Focus)
+ * 4. ANIMAÇÕES E TRANSIÇÕES
  */
 
 /**
- * ESTADOS DE INPUT E TEXTAREA
+ * 1. ESTADOS DE INPUT E TEXTAREA
  * ------------------------------------------------------------------
  */
 
@@ -34,7 +40,7 @@
 }
 
 /**
- * ESTADOS DO BOTÃO DE ENVIO
+ * 2. ESTADOS DO BOTÃO DE ENVIO
  * ------------------------------------------------------------------
  */
 
@@ -58,7 +64,7 @@
 }
 
 /**
- * ESTADOS DOS ÍCONES SOCIAIS
+ * 3. ESTADOS DOS ÍCONES SOCIAIS
  * ------------------------------------------------------------------
  */
 
@@ -79,4 +85,17 @@
     outline: none;                      /* Remove contorno padrão */
     box-shadow: 0 0 0 3px rgba(255, 160, 0, 0.3); /* Contorno personalizado */
     transform: translateY(-2px);         /* Leve elevação */
+}
+
+/**
+ * 4. ANIMAÇÕES E TRANSIÇÕES
+ * ------------------------------------------------------------------
+ */
+
+/* Transição suave para todos os elementos interativos */
+.contato-form input,
+.contato-form textarea,
+.button,
+.social-icon {
+    transition: all 0.3s ease;          /* Transição suave para todos os estados */
 }

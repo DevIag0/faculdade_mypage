@@ -4,6 +4,16 @@
  * Este arquivo contém estilos específicos para os diferentes componentes
  * e elementos do site. Enquanto global.css define os estilos reutilizáveis,
  * aqui são definidos os estilos particulares de cada seção.
+ * 
+ * ESTRUTURA DE ORGANIZAÇÃO:
+ * 1. ESTRUTURA BÁSICA (Header, Main, Footer)
+ * 2. COMPONENTES PRINCIPAIS (Quadro, Elementos decorativos)
+ * 3. PÁGINA INICIAL
+ * 4. PÁGINA DE PORTFÓLIO
+ * 5. PÁGINA DE FORMAÇÃO
+ * 6. PÁGINA DE CONTATO
+ * 7. ELEMENTOS DE INTERFACE COMUNS
+ * 8. ANIMAÇÕES E RESPONSIVIDADE GERAL
  */
 
 /**

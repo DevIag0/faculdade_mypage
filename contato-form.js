@@ -3,9 +3,17 @@
  * ------------------------------------------------------------------
  * Este script gerencia as interações do formulário de contato,
  * incluindo validação de campos e feedback para o usuário.
+ * 
+ * ESTRUTURA DE ORGANIZAÇÃO:
+ * 1. INICIALIZAÇÃO E SELEÇÃO DE ELEMENTOS
+ * 2. FUNÇÕES UTILITÁRIAS 
+ * 3. VALIDAÇÃO DE CAMPOS
+ * 4. MANIPULAÇÃO DE EVENTOS DE FORMULÁRIO
+ * 5. FEEDBACK VISUAL AO USUÁRIO
  */
 
-// Aguarda o carregamento completo do DOM
+// 1. INICIALIZAÇÃO E SELEÇÃO DE ELEMENTOS
+// ----------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     // Seleciona elementos do formulário
     const form = document.querySelector('.contato-form');
@@ -14,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageInput = document.getElementById('message');
     const submitButton = document.querySelector('.button');
 
+    // 2. FUNÇÕES UTILITÁRIAS
+    // ----------------------------------------------
+    
     // Função para validar o formato de email
     function isValidEmail(email) {
         // Regex básico para validação de email
@@ -21,7 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return emailRegex.test(email);
     }
 
-    // Adiciona validação customizada para o campo de email
+    // 3. VALIDAÇÃO DE CAMPOS
+    // ----------------------------------------------
+    
+    // Validação do campo de email
     emailInput.addEventListener('blur', () => {
         if (emailInput.value && !isValidEmail(emailInput.value)) {
             // Se o email for inválido, define um estilo visual e mensagem
@@ -34,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Adiciona validação para o tamanho mínimo do campo de mensagem
+    // Validação do tamanho da mensagem
     messageInput.addEventListener('blur', () => {
         if (messageInput.value.length < 10) {
             // Se a mensagem for muito curta
@@ -47,7 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Adiciona feedback visual quando o usuário começar a digitar
+    // 4. FEEDBACK VISUAL AO USUÁRIO
+    // ----------------------------------------------
+    
+    // Feedback visual durante digitação
     [nameInput, emailInput, messageInput].forEach(input => {
         input.addEventListener('input', () => {
             // Remove classe de inválido enquanto o usuário está digitando
@@ -55,7 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Gerencia o envio do formulário
+    // 5. MANIPULAÇÃO DE EVENTOS DE FORMULÁRIO
+    // ----------------------------------------------
+    
+    // Gerenciamento do envio do formulário
     form.addEventListener('submit', (event) => {
         // Verifica se todos os campos são válidos
         const isValid = nameInput.checkValidity() && 

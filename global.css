@@ -6,6 +6,13 @@
  * reutilizáveis que são usados em todo o site. A definição de cores
  * e estilos globais aqui permite uma fácil manutenção e consistência
  * visual em todo o projeto.
+ *
+ * ESTRUTURA DE ORGANIZAÇÃO:
+ * 1. VARIÁVEIS E SISTEMA DE CORES
+ * 2. TIPOGRAFIA E TEXTO BASE
+ * 3. LAYOUTS E CONTAINERS REUTILIZÁVEIS
+ * 4. COMPONENTES UI GENÉRICOS
+ * 5. UTILITÁRIOS E CLASSES AUXILIARES
  */
 
 /**

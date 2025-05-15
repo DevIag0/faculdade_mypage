@@ -4,10 +4,15 @@
  * Este arquivo contém estilos responsivos específicos para a página de contato.
  * Ele complementa os estilos base definidos em style.css e adapta o layout 
  * para diferentes tamanhos de tela.
+ *
+ * ESTRUTURA DE ORGANIZAÇÃO:
+ * 1. BREAKPOINT PARA DESKTOP PEQUENO/TABLETS LANDSCAPE (max-width: 1024px)
+ * 2. BREAKPOINT PARA TABLETS (max-width: 768px)
+ * 3. BREAKPOINT PARA SMARTPHONES (max-width: 480px)
  */
 
 /**
- * TELAS MÉDIAS (tablets, notebooks pequenos)
+ * 1. BREAKPOINT PARA DESKTOP PEQUENO/TABLETS LANDSCAPE
  * ------------------------------------------------------------------
  * Largura máxima de 1024px
  */
@@ -31,7 +36,7 @@
 }
 
 /**
- * TELAS PEQUENAS (tablets verticais, smartphones grandes)
+ * 2. BREAKPOINT PARA TABLETS
  * ------------------------------------------------------------------
  * Largura máxima de 768px
  */
@@ -80,7 +85,7 @@
 }
 
 /**
- * TELAS MUITO PEQUENAS (smartphones)
+ * 3. BREAKPOINT PARA SMARTPHONES
  * ------------------------------------------------------------------
  * Largura máxima de 480px
  */
