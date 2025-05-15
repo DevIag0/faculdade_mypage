@@ -157,7 +157,7 @@ body{
     border: 1px solid rgba(0,0,0,0.5);
     /* Sombras para efeito de profundidade */
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    z-index: 1;             /* Camada intermediária */
+    z-index: 0;             /* Camada intermediária */
     backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 
@@ -172,7 +172,7 @@ body{
     border-radius: 20px;
     border: 1px solid rgba(0,0,0,0.5);
     box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
-    z-index: 1;             /* Camada intermediária */
+    z-index: 0;             /* Camada intermediária */
     backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 

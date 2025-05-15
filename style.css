@@ -1,4 +1,3 @@
-
 /**
  * ESTILOS ESPECÍFICOS
  * ------------------------------------------------------------------
@@ -757,7 +756,7 @@ img{
     content: "✦";           /* Símbolo de estrela */
     position: absolute;     /* Posicionamento absoluto */
     left: -25px;            /* Posicionado na borda lateral */
-    color: var(--cinza-caneta); /* Cor azul (caneta) */
+    color: var (--cinza-caneta); /* Cor azul (caneta) */
     font-size: 1.1rem;      /* Tamanho do símbolo */
     text-shadow: 0 0 8px rgba(10, 189, 227, 0.4); /* Brilho azul */
 }
@@ -802,4 +801,490 @@ img{
     content: none !important; /* Desativa o pseudo-elemento */
 }
 
+/**
+ * ESTILIZAÇÃO DO QUADRO DO PORTFÓLIO
+ * ------------------------------------------------------------------
+ * Estilização do quadro principal que contém os containers do portfólio
+ */
 
+.container-portifolio {
+    position: relative;     /* Para posicionamento absoluto dos filhos */
+    width: 100%;            /* Largura total */
+    height: 100vh;          /* Altura total da viewport */
+    display: flex;          /* Layout flexível */
+    justify-content: center; /* Centraliza os filhos horizontalmente */
+    align-items: center;    /* Centraliza os filhos verticalmente */
+}
+
+/* Estilo base compartilhado por todos os containers de portfólio */
+.container-portifolio-1,
+.container-portifolio-2,
+.container-portifolio-3,
+.container-portifolio-4 {
+    position: absolute;      /* Posicionamento absoluto dentro do quadro */
+    height: 65%;             /* Altura proporcionalmente maior para acomodar conteúdo */
+    width: 20%;              /* Largura proporcional */
+    background-color: rgba(29, 33, 35, 0.95); /* Fundo escuro semi-transparente */
+    border-radius: 15px;     /* Bordas arredondadas */
+    border: 1px solid rgba(0,0,0,0.5); /* Borda sutil */
+    /* Sombras para efeito de profundidade */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 40px rgba(10, 189, 227, 0.05) inset;
+    z-index: 1;              /* Camada intermediária */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+    display: flex;           /* Layout flexível */
+    flex-direction: column;  /* Empilha os elementos internos */
+    overflow: hidden;        /* Esconde conteúdo que ultrapasse o container */
+    transition: all 0.3s ease; /* Transição suave para efeitos hover */
+    padding-bottom: 15px;    /* Espaço adicional na parte inferior */
+}
+
+/* Posicionamento específico para cada container */
+.container-portifolio-1 {
+    top: 12%;                /* Posição vertical */
+    left: 5%;                /* Posição horizontal (à esquerda) */
+}
+
+.container-portifolio-2 {
+    top: 12%;                /* Posição vertical */
+    left: 28%;               /* Posição horizontal */
+}
+
+.container-portifolio-3 {
+    top: 12%;                /* Posição vertical */
+    right: 28%;              /* Posição horizontal */
+}
+
+.container-portifolio-4 {
+    top: 12%;                /* Posição vertical */
+    right: 5%;               /* Posição horizontal (à direita) */
+}
+
+/* Efeito hover nos containers */
+.container-portifolio-1:hover,
+.container-portifolio-2:hover,
+.container-portifolio-3:hover,
+.container-portifolio-4:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3), 0 0 40px rgba(10, 189, 227, 0.1) inset;
+    border-color: rgba(255, 160, 0, 0.3); /* Borda destacada na cor âmbar */
+}
+
+/**
+ * ÁREA DE IMAGEM DO PROJETO
+ * ------------------------------------------------------------------
+ * Contém e estiliza a imagem do projeto
+ */
+.portfolio-image {
+    width: 100%;             /* Largura total do container */
+    height: 45%;             /* Altura proporcional */
+    overflow: hidden;        /* Corta a imagem para se adaptar ao container */
+    border-radius: 15px 15px 0 0; /* Arredonda apenas cantos superiores */
+}
+
+/* Estilização de imagens dentro dos containers de portfólio */
+.portfolio-image img {
+    width: 100%;             /* Largura total */
+    height: 100%;            /* Altura total */
+    object-fit: cover;       /* Garante que a imagem cubra todo o espaço disponível */
+    border-radius: 15px 15px 0 0; /* Arredonda cantos superiores */
+    transition: transform 0.5s ease; /* Transição suave para zoom */
+    border-bottom: 2px solid rgba(255, 160, 0, 0.3); /* Separador sutil */
+}
+
+/* Efeito hover nas imagens (zoom suave) */
+.portfolio-image img:hover {
+    transform: scale(1.05);  /* Efeito de zoom */
+}
+
+/**
+ * PLACEHOLDERS DE IMAGEM
+ * ------------------------------------------------------------------
+ * Estilos para os placeholders temporários de imagens
+ */
+.placeholder-image {
+    width: 100%;             /* Largura total */
+    height: 100%;            /* Altura total */
+    background: linear-gradient(135deg, #2D3436 0%, #1E272E 100%); /* Gradiente escuro */
+    border-radius: 15px 15px 0 0; /* Arredonda apenas cantos superiores */
+    display: flex;           /* Layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    border-bottom: 2px solid rgba(255, 160, 0, 0.3); /* Separador sutil */
+    position: relative;      /* Para elementos absolutos internos */
+    overflow: hidden;        /* Esconde conteúdo que ultrapasse */
+    transition: all 0.3s ease; /* Transição suave para efeitos */
+}
+
+/* Efeito com linhas decorativas */
+.placeholder-image::before {
+    content: "";             /* Elemento pseudo */
+    position: absolute;      /* Posicionamento absoluto */
+    top: -50%;               /* Posição inicial fora da visualização */
+    left: -50%;              /* Posição inicial fora da visualização */
+    width: 200%;             /* Largura maior que o container */
+    height: 200%;            /* Altura maior que o container */
+    background: linear-gradient(
+        to right, 
+        transparent 46%, 
+        rgba(10, 189, 227, 0.1) 47%,
+        rgba(10, 189, 227, 0.1) 53%, 
+        transparent 54%
+    );
+    /* Rotação do gradiente */
+    transform: rotate(45deg);
+    opacity: 0.5;            /* Semitransparente */
+    z-index: 1;              /* Acima do fundo */
+}
+
+/* Efeito com linhas decorativas (perpendicular) */
+.placeholder-image::after {
+    content: "";             /* Elemento pseudo */
+    position: absolute;      /* Posicionamento absoluto */
+    top: -50%;               /* Posição inicial fora da visualização */
+    left: -50%;              /* Posição inicial fora da visualização */
+    width: 200%;             /* Largura maior que o container */
+    height: 200%;            /* Altura maior que o container */
+    background: linear-gradient(
+        to right, 
+        transparent 46%, 
+        rgba(255, 160, 0, 0.1) 47%,
+        rgba(255, 160, 0, 0.1) 53%, 
+        transparent 54%
+    );
+    /* Rotação do gradiente (perpendicular ao anterior) */
+    transform: rotate(-45deg);
+    opacity: 0.5;            /* Semitransparente */
+    z-index: 1;              /* Acima do fundo */
+}
+
+/* Texto do placeholder */
+.placeholder-image span {
+    font-size: 1.4rem;       /* Tamanho da fonte */
+    color: var(--destaque);  /* Cor âmbar para destaque */
+    font-weight: bold;       /* Texto em negrito */
+    z-index: 2;              /* Acima dos efeitos de background */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Sombra para contraste */
+    position: relative;      /* Para efeitos de hover */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover no placeholder */
+.placeholder-image:hover {
+    background: linear-gradient(135deg, #212628 0%, #141a1e 100%); /* Gradiente um pouco mais escuro */
+    box-shadow: inset 0 0 20px rgba(10, 189, 227, 0.1); /* Brilho interno sutil */
+}
+
+/* Efeito hover no texto do placeholder */
+.placeholder-image:hover span {
+    transform: scale(1.1);   /* Aumenta levemente o texto */
+    color: var (--cinza-caneta); /* Muda para cor azul (caneta) */
+    text-shadow: 0 0 15px rgba(10, 189, 227, 0.5); /* Brilho azul */
+}
+
+/**
+ * ÁREA DE CONTEÚDO DO PROJETO
+ * ------------------------------------------------------------------
+ * Contém título, descrição e links do projeto
+ */
+.portfolio-content {
+    flex: 1;                /* Ocupa o espaço restante */
+    display: flex;          /* Layout flexível */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    padding: 15px;          /* Espaçamento interno */
+    gap: 8px;               /* Espaçamento entre elementos */
+}
+
+/* Título do projeto */
+.portfolio-content h3 {
+    color: var(--destaque); /* Cor âmbar para destaque */
+    font-size: 1.3rem;      /* Tamanho da fonte */
+    margin-bottom: 5px;     /* Espaçamento inferior */
+    position: relative;     /* Para posicionamento do pseudo-elemento */
+    padding-bottom: 10px;   /* Espaço para o separador */
+}
+
+/* Linha decorativa abaixo do título */
+.portfolio-content h3::after {
+    content: "";            /* Necessário para pseudo-elementos */
+    position: absolute;     /* Posicionamento absoluto */
+    bottom: 0;              /* Alinhado à parte inferior */
+    left: 0;                /* Alinhado à esquerda */
+    width: 50px;            /* Largura fixa */
+    height: 2px;            /* Altura da linha */
+    background-color: var(--cinza-caneta); /* Cor azul (caneta) */
+    border-radius: 2px;     /* Arredondamento das bordas */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+/* Descrição do projeto */
+.portfolio-content p {
+    color: var(--branco);   /* Cor branca para legibilidade */
+    font-size: 0.95rem;     /* Tamanho da fonte */
+    line-height: 1.4;       /* Espaçamento entre linhas */
+    flex: 1;                /* Ocupa espaço disponível */
+}
+
+/**
+ * ÁREA DE LINKS DO PROJETO
+ * ------------------------------------------------------------------
+ * Container para os botões de ação
+ */
+.portfolio-links {
+    display: flex;          /* Layout flexível */
+    justify-content: space-between; /* Espaçamento entre os botões */
+    margin-top: auto;       /* Empurra para a parte inferior */
+    padding-top: 10px;      /* Espaçamento superior */
+    margin-top: 10px;       /* Espaço acima dos botões */
+}
+
+/* Botões de link */
+.portfolio-btn {
+    padding: 8px 12px;      /* Espaçamento interno */
+    background-color: rgba(30, 39, 46, 0.8); /* Fundo escuro semi-transparente */
+    color: var(--branco);   /* Texto branco */
+    text-decoration: none;  /* Remove sublinhado */
+    border-radius: 5px;     /* Bordas arredondadas */
+    font-size: 0.85rem;     /* Tamanho da fonte */
+    font-weight: 500;       /* Peso médio */
+    transition: all 0.3s ease; /* Transição suave */
+    border: 1px solid rgba(255, 160, 0, 0.2); /* Borda sutil */
+}
+
+/* Efeito hover nos botões */
+.portfolio-btn:hover {
+    background-color: var(--destaque); /* Muda para cor de destaque (âmbar) */
+    color: #111;            /* Texto escuro para contraste */
+    transform: translateY(-2px); /* Efeito de elevação */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+/**
+ * CONTAINER DE TAGS DE TECNOLOGIA
+ * ------------------------------------------------------------------
+ * Estilização do container para as tags de tecnologias usadas
+ */
+.tech-tags {
+    display: flex;          /* Layout flexível */
+    flex-wrap: wrap;        /* Permite quebra de linha */
+    gap: 5px;               /* Espaçamento entre tags */
+    margin-top: 5px;        /* Espaçamento acima */
+    margin-bottom: 10px;    /* Espaçamento abaixo */
+}
+
+/* Inicialmente oculto para animação */
+.container-portifolio > div {
+    opacity: 0;             /* Começa invisível */
+}
+
+/**
+ * RESPONSIVIDADE PARA PORTFÓLIO
+ * ------------------------------------------------------------------
+ * Ajustes para diferentes tamanhos de tela
+ */
+@media screen and (max-width: 1200px) {
+    .container-portifolio-1,
+    .container-portifolio-2,
+    .container-portifolio-3,
+    .container-portifolio-4 {
+        width: 22%;         /* Largura ligeiramente maior */
+        height: 60%;        /* Altura ligeiramente menor */
+    }
+    
+    .portfolio-content h3 {
+        font-size: 1.2rem;  /* Título menor */
+    }
+    
+    .portfolio-content p {
+        font-size: 0.9rem;  /* Descrição menor */
+        line-height: 1.3;   /* Espaçamento entre linhas reduzido */
+    }
+    
+    .portfolio-btn {
+        padding: 6px 10px;  /* Botões menores */
+        font-size: 0.8rem;  /* Fonte menor nos botões */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-portifolio {
+        position: static;    /* Remove posicionamento relativo */
+        display: grid;       /* Usa layout grid */
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+        gap: 20px;           /* Espaçamento entre itens */
+        padding: 20px;       /* Espaçamento interno */
+        height: auto;        /* Altura automática */
+        margin: 20px 0;      /* Margem vertical */
+    }
+    
+    .container-portifolio-1,
+    .container-portifolio-2,
+    .container-portifolio-3,
+    .container-portifolio-4 {
+        position: static;    /* Remove posicionamento absoluto */
+        width: 100%;         /* Largura total na célula do grid */
+        height: 380px;       /* Altura fixa */
+        margin: 0;           /* Remove margens */
+    }
+    
+    .portfolio-image {
+        height: 40%;         /* Altura proporcional menor */
+    }
+    
+    /* Ajustes nos elementos decorativos */
+    .container-gray-top,
+    .container-gray-bottom {
+        display: none;       /* Oculta em telas menores para simplificar */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-board {
+        height: auto;        /* Altura automática */
+        min-height: 85vh;    /* Altura mínima */
+        padding-bottom: 30px; /* Espaçamento inferior */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-portifolio {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+    
+    .container-portifolio-1,
+    .container-portifolio-2,
+    .container-portifolio-3,
+    .container-portifolio-4 {
+        height: 350px;       /* Altura fixa menor */
+    }
+    
+    .portfolio-image {
+        height: 40%;         /* Altura proporcional menor */
+    }
+    
+    .portfolio-content h3 {
+        font-size: 1.1rem;   /* Título ainda menor */
+    }
+    
+    .portfolio-content p {
+        font-size: 0.85rem;  /* Descrição ainda menor */
+    }
+    
+    .portfolio-btn {
+        padding: 5px 8px;    /* Botões ainda menores */
+        font-size: 0.75rem;  /* Fonte menor nos botões */
+    }
+}
+
+/**
+ * TÍTULO DA SEÇÃO DE PORTFÓLIO
+ * ------------------------------------------------------------------
+ * Estilização do título principal da página de portfólio
+ */
+.portfolio-title {
+    position: absolute;     /* Posicionamento absoluto */
+    top: 4%;                /* Posição vertical */
+    left: 50%;              /* Centralizado horizontalmente */
+    transform: translateX(-50%); /* Ajuste fino da centralização */
+    color: var(--destaque); /* Cor âmbar para destaque */
+    font-size: 2rem;        /* Tamanho da fonte */
+    font-weight: bold;      /* Texto em negrito */
+    text-align: center;     /* Centraliza o texto */
+    z-index: 2;             /* Acima de outros elementos */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Sombra para contraste */
+    letter-spacing: 2px;    /* Espaçamento entre letras */
+    width: 100%;            /* Largura total disponível */
+}
+
+/* Efeito decorativo sob o título */
+.portfolio-title::after {
+    content: "";            /* Necessário para pseudo-elementos */
+    position: absolute;     /* Posicionamento absoluto */
+    bottom: -8px;           /* Posicionado abaixo do texto */
+    left: 50%;              /* Centralizado */
+    transform: translateX(-50%); /* Ajuste fino da centralização */
+    width: 100px;           /* Largura fixa */
+    height: 3px;            /* Altura da linha */
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--cinza-caneta), 
+        transparent
+    );
+    border-radius: 3px;     /* Arredondamento das bordas */
+    box-shadow: 0 0 10px rgba(10, 189, 227, 0.5); /* Brilho azul */
+}
+
+/* Ajuste responsivo para o título */
+@media screen and (max-width: 768px) {
+    .portfolio-title {
+        font-size: 1.8rem;   /* Tamanho menor para telas médias */
+        top: 6%;             /* Ajuste de posição */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio-title {
+        font-size: 1.5rem;   /* Tamanho menor para telas pequenas */
+        position: relative;  /* Muda para posicionamento relativo */
+        top: auto;           /* Remove posicionamento vertical */
+        left: auto;          /* Remove posicionamento horizontal */
+        transform: none;     /* Remove transformação */
+        margin: 20px auto 10px; /* Adiciona margens */
+    }
+}
+
+/**
+ * ANIMAÇÕES E EFEITOS PARA O PORTFÓLIO
+ * ------------------------------------------------------------------
+ * Animações e efeitos interativos para os elementos de portfólio
+ */
+
+/* Efeito de destaque no título ao passar o mouse */
+.portfolio-title:hover::after {
+    width: 150px;           /* Aumenta o tamanho da linha */
+    transition: width 0.3s ease; /* Transição suave */
+}
+
+/* Animação de entrada para os containers (aplicada via JS ou classe) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;         /* Começa invisível */
+        transform: translateY(20px); /* Começa deslocado para baixo */
+    }
+    to {
+        opacity: 1;         /* Termina totalmente visível */
+        transform: translateY(0); /* Termina na posição normal */
+    }
+}
+
+/* Classes para aplicar animação com delays diferentes */
+.fade-in {
+    animation: fadeIn 0.8s ease forwards; /* Animação de 0.8s */
+    opacity: 0;            /* Começa invisível */
+}
+
+/* Classe para criar sensação de profundidade ao passar o mouse (opcional, aplicar via JS) */
+.depth-effect:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg) scale(1.02);
+    transition: transform 0.5s ease;
+}
+
+/* Indicador visual de tecnologias usadas nos projetos */
+.tech-tag {
+    display: inline-block;  /* Para que fiquem em linha */
+    background-color: rgba(10, 189, 227, 0.2); /* Fundo azul semi-transparente */
+    color: var(--branco);   /* Texto branco */
+    padding: 3px 8px;       /* Espaçamento interno */
+    border-radius: 12px;    /* Bordas bem arredondadas */
+    font-size: 0.7rem;      /* Fonte pequena */
+    margin-right: 5px;      /* Espaçamento à direita */
+    margin-bottom: 5px;     /* Espaçamento abaixo */
+    border: 1px solid rgba(10, 189, 227, 0.3); /* Borda sutil */
+}
+
+/* Responsividade para tags de tecnologia */
+@media screen and (max-width: 1200px) {
+    .tech-tag {
+        padding: 2px 6px;   /* Padding reduzido */
+        font-size: 0.65rem; /* Fonte ainda menor */
+    }
+}
