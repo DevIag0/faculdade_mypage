@@ -1258,7 +1258,7 @@ img{
     transition: width 0.3s ease; /* Transição suave */
 }
 
-/* Animação de entrada para os containers (aplicada via JS ou classe) */
+/* Animação de entrada para os containers */
 @keyframes fadeIn {
     from {
         opacity: 0;         /* Começa invisível */
@@ -1276,7 +1276,7 @@ img{
     opacity: 0;            /* Começa invisível */
 }
 
-/* Classe para criar sensação de profundidade ao passar o mouse (opcional, aplicar via JS) */
+/* Classe para criar sensação de profundidade ao passar o mouse ) */
 .depth-effect:hover {
     transform: perspective(1000px) rotateX(2deg) rotateY(2deg) scale(1.02);
     transition: transform 0.5s ease;
