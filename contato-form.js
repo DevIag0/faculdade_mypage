@@ -95,20 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 messageInput.focus();
             }
         } else {
-            // Se tudo estiver válido, adiciona animação ao botão de envio
+        
             submitButton.classList.add('sending');
             submitButton.textContent = 'Enviando...';
             
-            // Opcional: simulação de envio (em caso de implementação futura de AJAX)
-            // Remover o setTimeout e implementar o envio real quando necessário
-            /* 
-            setTimeout(() => {
-                // Aqui entraria a lógica de finalização do envio
-                submitButton.classList.remove('sending');
-                submitButton.textContent = 'Enviado!';
-                form.reset();
-            }, 2000);
-            */
+          
+          
         }
     });
 });
