@@ -383,3 +383,29 @@
         font-size: 1.8rem;           /* Reduz tamanho do título */
     }
 }
+
+/* Estilos para as tags de interesse */
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.interest-tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.interest-tag:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
