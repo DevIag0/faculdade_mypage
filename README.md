@@ -4,7 +4,7 @@ Este projeto consiste em um site de portfólio pessoal com design inspirado em u
 
 ## 📋 Visão Geral
 
-O site funciona como um currículo online e portfólio pessoal, apresentando informações sobre formação acadêmica, habilidades técnicas, projetos desenvolvidos e formas de contato. O Design é inspirado em um quadro escolar, com elementos visuais que remetem a essa temática.
+O site funciona como um currículo online e portfólio pessoal, apresentando informações sobre formação acadêmica, habilidades técnicas, projetos desenvolvidos e formas de contato. O Design é inspirado em uma prancheta com elementos visuais que remetem a essa temática.
 
 ## 🎨 Design e Interface
 
