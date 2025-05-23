@@ -1,6 +1,6 @@
 # Portfólio Pessoal - Iago Trindade Souza
 
-Este projeto consiste em um site de portfólio pessoal com design inspirado em quadro escolar, desenvolvido como parte do curso de Engenharia de Software.
+Este projeto consiste em um site de portfólio pessoal com design inspirado em quadro escolar, desenvolvido como parte do curso de Engenharia de Software, onde era necessário usar HTML, CSS e JavaScript somente, sem framework.
 
 ## 📋 Visão Geral
 
