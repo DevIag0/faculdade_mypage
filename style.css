@@ -44,6 +44,12 @@
         }
 }
 
+@media screen and (max-width: 768px){
+    .header-nav ul{
+        justify-content: center; /* Centraliza os itens em telas pequenas */
+    }
+}
+
 /**
  * QUADRO PRINCIPAL (CONTAINER PRINCIPAL)
  * ------------------------------------------------------------------
