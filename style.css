@@ -24,7 +24,8 @@
 .header-nav ul{
     max-width: 1500px;     /* Largura máxima para centralização */
     margin: 0 auto;        /* Centralização horizontal */
-    display: flex;         /* Layout flexível para itens em linha */    
+    display: flex;         /* Layout flexível para itens em linha */  
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
     gap: 20px;             /* Espaçamento entre itens do menu */
     justify-content: flex-end; /* Alinhamento à direita */
     align-items: center;   /* Alinhamento vertical ao centro */
